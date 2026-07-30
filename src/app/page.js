@@ -1,8 +1,11 @@
+import RecruiterHeader from "@/components/recruiter/RecruiterHeader";
+import RecruiterHero from "@/components/recruiter/RecruiterHero";
+
 export default function Home() {
   return (
-    <main>
-      <h1>Kimberly DeMaio Portfolio</h1>
-      <p>Strange, beautiful, controlled.</p>
+    <main className="recruiter-page">
+      <RecruiterHeader />
+      <RecruiterHero />
     </main>
   );
 }
