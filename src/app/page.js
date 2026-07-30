@@ -1,6 +1,7 @@
 import RecruiterHeader from "@/components/recruiter/RecruiterHeader";
 import RecruiterHero from "@/components/recruiter/RecruiterHero";
 import FeaturedWork from "@/components/recruiter/FeaturedWork";
+import ExperienceSnapshot from "@/components/recruiter/ExperienceSnapshot";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <RecruiterHeader />
       <RecruiterHero />
       <FeaturedWork />
+      <ExperienceSnapshot />
     </main>
   );
 }
