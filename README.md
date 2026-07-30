@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Kimberly DeMaio Portfolio
 
-## Getting Started
+An immersive professional portfolio exploring the intersection of business operations, analytics, systems thinking, software development, and creative problem-solving.
 
-First, run the development server:
+## Project status
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Early development.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The project foundation is complete:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- Designed in Figma
+- Built with Next.js and JavaScript
+- Version-controlled with Git and GitHub
+- Deployed through Vercel
+- Connected to a custom GoDaddy domain
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Live site
 
-## Learn More
+https://www.kimberlydemaio.com
 
-To learn more about Next.js, take a look at the following resources:
+## Design direction
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The portfolio includes two experiences:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Recruiter View** — clear, polished, and easy to scan
+- **Explorer View** — immersive, interactive, and designed to reward curiosity
 
-## Deploy on Vercel
+Creative direction:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+> Strange, beautiful, controlled.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The presentation itself is intended to demonstrate creative thinking, systems thinking, and the ability to see possibilities others may miss.
+
+## Technology
+
+- Next.js
+- React
+- JavaScript
+- CSS
+- Git
+- GitHub
+- Vercel
+- Figma
