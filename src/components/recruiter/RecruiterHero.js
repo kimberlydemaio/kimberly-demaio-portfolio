@@ -39,7 +39,14 @@ export default function RecruiterHero() {
         </div>
 
         <div className="hero-visual">
-          <span>Botanical systems illustration / interactive visual</span>
+          <div className="portal-scene">
+            <div className="portal-frame">
+              <div className="portal-opening">
+                <div className="portal-path"></div>
+                <div className="portal-glow"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
