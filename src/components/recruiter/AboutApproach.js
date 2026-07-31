@@ -2,7 +2,7 @@ export default function AboutApproach() {
   return (
     <section className="about-approach" id="about">
       <div className="about-intro">
-        <p>About my approach</p>
+        <p className="section-eyebrow">About my approach</p>
         <h2>I look for the system underneath the problem.</h2>
       </div>
       <div className="approach-grid">
