@@ -4,6 +4,7 @@ import FeaturedWork from "@/components/recruiter/FeaturedWork";
 import ExperienceSnapshot from "@/components/recruiter/ExperienceSnapshot";
 import VisualizationCallout from "@/components/recruiter/VisualizationCallout";
 import AboutApproach from "@/components/recruiter/AboutApproach";
+import ContactClosing from "@/components/recruiter/ContactClosing";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <ExperienceSnapshot />
       <VisualizationCallout />
       <AboutApproach />
+      <ContactClosing />
     </main>
   );
 }
