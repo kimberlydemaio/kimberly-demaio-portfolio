@@ -493,6 +493,68 @@ p {
   text-align: center;
 }
 
+/* Recruiter View — About Approach */
+
+.about-approach {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 96px 0 120px;
+}
+
+.about-intro {
+  max-width: 760px;
+  margin-bottom: 56px;
+}
+
+.about-intro h2 {
+  margin: 0;
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: clamp(3rem, 5vw, 5rem);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 0.98;
+}
+
+.about-intro > p:last-child {
+  max-width: 680px;
+  margin-top: 24px;
+  color: #55645e;
+  line-height: 1.75;
+}
+
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.approach-card {
+  min-height: 260px;
+  padding: 28px;
+  border-top: 1px solid rgba(24, 57, 47, 0.2);
+}
+
+.approach-number {
+  margin-bottom: 42px;
+  color: #849087;
+  font-size: 1.1rem;
+  font-family: var(--font-cormorant), Georgia, serif;
+}
+
+.approach-card h3 {
+  margin: 0;
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+.approach-card p:last-child {
+  margin-top: 18px;
+  color: #55645e;
+  line-height: 1.7;
+}
+
 /* Responsive Styles - Tablet */
 
 @media (max-width: 960px) {
@@ -534,6 +596,9 @@ p {
   .visualization-callout {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+  .approach-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -595,5 +660,14 @@ p {
   }
   .visualization-preview {
     min-height: 300px;
+  }
+  .about-approach {
+    width: min(100% - 28px, 1180px);
+    padding: 72px 0 88px;
+  }
+
+  .approach-card {
+    min-height: auto;
+    padding: 24px 0;
   }
 }

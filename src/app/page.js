@@ -3,6 +3,7 @@ import RecruiterHero from "@/components/recruiter/RecruiterHero";
 import FeaturedWork from "@/components/recruiter/FeaturedWork";
 import ExperienceSnapshot from "@/components/recruiter/ExperienceSnapshot";
 import VisualizationCallout from "@/components/recruiter/VisualizationCallout";
+import AboutApproach from "@/components/recruiter/AboutApproach";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <FeaturedWork />
       <ExperienceSnapshot />
       <VisualizationCallout />
+      <AboutApproach />
     </main>
   );
 }
