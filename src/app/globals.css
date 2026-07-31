@@ -33,8 +33,14 @@
   --portal-interior: #183f31;
   --portal-middle: #245b43;
   --portal-glow: #a8d5a8;
+  --portal-dark: #081c15;
+  --portal-foliage: #315f46;
+  --portal-path: #9aa77f;
+  --portal-light: #f4d88a;
   --portal-glow-rgb: 168, 213, 168;
   --portal-shadow-rgb: 11, 30, 23;
+  --portal-path-rgb: 154, 167, 127;
+  --portal-light-rgb: 244, 216, 138;
 
   /* Transparent RGB sources */
   --parchment-rgb: 242, 232, 213;
@@ -264,6 +270,117 @@ p {
       var(--portal-middle) 42%,
       var(--green-deep) 100%
     );
+}
+
+.portal-trees {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      ellipse at 12% 48%,
+      var(--portal-dark) 0 18%,
+      transparent 19%
+    ),
+    radial-gradient(
+      ellipse at 88% 42%,
+      var(--portal-dark) 0 20%,
+      transparent 21%
+    ),
+    radial-gradient(
+      ellipse at 24% 18%,
+      var(--portal-foliage) 0 16%,
+      transparent 17%
+    ),
+    radial-gradient(
+      ellipse at 76% 16%,
+      var(--portal-foliage) 0 18%,
+      transparent 19%
+    );
+}
+
+.portal-glow {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 54%;
+  height: 48%;
+  border-radius: 50%;
+  background: radial-gradient
+    (
+      circle,
+      rgba(var(--portal-glow-rgb), 0.8),
+      rgba(var(--portal-glow-rgb), 0.22) 45%,
+      transparent 72%
+    );
+}
+
+.portal-path {
+  position: absolute;
+  bottom: -8%;
+  left: 50%;
+  width: 72%;
+  height: 64%;
+  background: linear-gradient
+    (
+      to top,
+      rgba(var(--portal-path-rgb), 0.85),
+      rgba(var(--portal-path-rgb), 0.2) 68%,
+      transparent
+    );
+}
+
+.portal-light {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--portal-light);
+  box-shadow:
+    0 0 8px rgba(var(--portal-light-rgb), 0.95),
+    0 0 18px rgba(var(--portal-light-rgb), 0.65);
+  animation: portal-flicker 2.8s ease-in-out infinite;
+}
+
+.light-one {
+  top: 28%;
+  left: 24%;
+}
+
+.light-two {
+  top: 42%;
+  right: 20%;
+  animation-delay: 0.7s;
+}
+
+.light-three {
+  top: 57%;
+  left: 32%;
+  animation-delay: 1.2s;
+}
+
+.light-four {
+  top: 22%;
+  right: 32%;
+  animation-delay: 1.7s;
+}
+
+.light-five {
+  top: 66%;
+  right: 30%;
+  animation-delay: 2.1s;
+}
+
+@keyframes portal-flicker {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: translateY(0) scale(0.85);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(-5px) scale(1.15);
+  }
 }
 
 /* Recruiter - View - Buttons */

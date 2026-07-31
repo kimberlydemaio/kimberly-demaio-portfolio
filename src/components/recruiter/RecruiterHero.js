@@ -42,8 +42,15 @@ export default function RecruiterHero() {
           <div className="portal-scene">
             <div className="portal-frame">
               <div className="portal-opening">
-                <div className="portal-path"></div>
+                <div className="portal-trees"></div>
                 <div className="portal-glow"></div>
+                <div className="portal-path"></div>
+
+                <span className="portal-light light-one"></span>
+                <span className="portal-light light-two"></span>
+                <span className="portal-light light-three"></span>
+                <span className="portal-light light-four"></span>
+                <span className="portal-light light-five"></span>
               </div>
             </div>
           </div>
