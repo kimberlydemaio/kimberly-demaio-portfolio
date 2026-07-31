@@ -50,7 +50,11 @@ p {
 .recruiter-page {
   min-height: 100vh;
   background:
-    radial-gradient(circle at top right, rgba(126, 143, 113, 0.12), transparent 32rem),
+    radial-gradient(
+      circle at top right,
+      rgba(126, 143, 113, 0.12),
+      transparent 32rem
+    ),
     #f7f4ed;
   color: #18392f;
 }
@@ -445,6 +449,50 @@ p {
   line-height: 1.7;
 }
 
+/* Recruiter View — Visualization Callout */
+
+.visualization-callout {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 96px 0;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 72px;
+}
+
+.visualization-copy h2 {
+  margin: 0;
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: clamp(3rem, 5vw, 5rem);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 0.98;
+}
+
+.visualization-copy p:last-child {
+  max-width: 560px;
+  margin-top: 24px;
+  color: #55645e;
+  line-height: 1.75;
+}
+
+.visualization-preview {
+  min-height: 420px;
+  display: grid;
+  place-items: center;
+  padding: 32px;
+  border: 1px solid rgba(24, 57, 47, 0.15);
+  background: rgba(223, 227, 215, 0.65);
+}
+
+.visualization-preview span {
+  color: #64736b;
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
 /* Responsive Styles - Tablet */
 
 @media (max-width: 960px) {
@@ -482,6 +530,10 @@ p {
 
   .experience-grid {
     grid-template-columns: 1fr;
+  }
+  .visualization-callout {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 }
 
@@ -536,5 +588,12 @@ p {
   .experience-card {
     min-height: auto;
     padding: 24px;
+  }
+  .visualization-callout {
+    width: min(100% - 28px, 1180px);
+    padding: 72px 0;
+  }
+  .visualization-preview {
+    min-height: 300px;
   }
 }
