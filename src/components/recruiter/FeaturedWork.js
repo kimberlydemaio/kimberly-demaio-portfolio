@@ -21,12 +21,12 @@ const projects = [
   },
   {
     number: "03",
-  category: "Workforce Analytics",
-  title: "Succession Planning System",
-  description:
-    "Designed a data-driven succession planning framework that evaluates readiness across performance, tenure, leadership feedback, skills, and role progression.",
-  result: "Leadership proposal approved",
-  href: "#",
+    category: "Workforce Analytics",
+    title: "Succession Planning System",
+    description:
+      "Designed a data-driven succession planning framework that evaluates readiness across performance, tenure, leadership feedback, skills, and role progression.",
+    result: "Leadership proposal approved",
+    href: "#",
   },
 ];
 
@@ -37,11 +37,12 @@ export default function FeaturedWork() {
         <p className="section-eyebrow">Selected work</p>
 
         <div className="section-heading-row">
-          <h2>Systems built to solve real problems.</h2>
+          <h2>Built from real problems and a lot of curiosity.</h2>
 
           <p>
-            A selection of analytics, operations, automation, and product
-            projects designed around clarity, usability, and measurable impact.
+            These projects span analytics, operations, automation, and product
+            work—but they all started with the same question: how can this be
+            clearer, easier, or more useful?
           </p>
         </div>
       </div>

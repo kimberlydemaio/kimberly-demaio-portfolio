@@ -5,11 +5,11 @@ export default function ContactClosing() {
     <section className="contact-closing" id="contact">
       <div className="contact-copy">
         <p className="section-eyebrow">Let&apos;s connect</p>
-        <h2>Have a problem worth solving?</h2>
+        <h2>Let&apos;s build something worth caring about.</h2>
         <p>
-          I&apos;m interested in roles and projects where I can combine
-          operations analytics, systems thinking, and software development to
-          build something genuinely useful.
+          I’m interested in thoughtful work that brings together operations,
+          analytics, systems thinking, and software—especially when the result
+          is something people genuinely enjoy using.
         </p>
       </div>
       <div className="contact-actions">

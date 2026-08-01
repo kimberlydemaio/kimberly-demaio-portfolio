@@ -14,17 +14,16 @@ export default function RecruiterHero() {
       <section className="recruiter-hero" aria-labelledby="hero-heading">
         <div className="hero-copy">
           <p className="eyebrow">
-            Business Operations · Analytics · Systems · Software Development
+            Operations, data, systems & a little curiosity
           </p>
 
-          <h1 id="hero-heading">
-            I turn complex problems into systems that work.
-          </h1>
+          <h1 id="hero-heading">I like finding the pattern inside the mess.</h1>
 
           <p className="hero-description">
-            I combine analytics, operations, process improvement, software
-            development, and creative thinking to build clearer, more useful
-            ways of working.
+            I’m Kimberly. I’m drawn to complicated problems, hidden patterns,
+            and the challenge of turning scattered information into something
+            useful—whether that becomes a system, a visualization, a workflow,
+            or a web application.
           </p>
 
           <div className="hero-actions">

@@ -7,10 +7,13 @@ export default function VisualizationCallout() {
       <div className="visualization-preview">
         <span>Interactive visualization preview</span>
       </div>
-      <h2>Data should be useful, but it can also be beautiful.</h2>
+      <h2>
+        I love the point where data becomes something you can see and explore.
+      </h2>
       <p>
-        I am especially interested in creating interactive visualizations that
-        make complex information easier to explore, understand, and act on.
+        Interactive visualizations are especially exciting to me because they
+        can make complicated information feel clearer, more approachable, and
+        even a little surprising.
       </p>
     </section>
   );
