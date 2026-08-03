@@ -42,6 +42,8 @@ export default function RecruiterHero() {
             <div className="portal-frame">
               <div className="portal-opening">
                 <div className="portal-trees"></div>
+                <div className="portal-trunk portal-trunk-left"></div>
+                <div className="portal-trunk portal-trunk-right"></div>
                 <div className="portal-glow"></div>
                 <div className="portal-path"></div>
 
@@ -50,6 +52,23 @@ export default function RecruiterHero() {
                 <span className="portal-light light-three"></span>
                 <span className="portal-light light-four"></span>
                 <span className="portal-light light-five"></span>
+              </div>
+              <div className="portal-vine portal-vine-left">
+                <span className="vine-leaf leaf-one"></span>
+                <span className="vine-leaf leaf-two"></span>
+                <span className="vine-leaf leaf-three"></span>
+              </div>
+              <div className="portal-vine portal-vine-right">
+                <span className="vine-leaf leaf-one"></span>
+                <span className="vine-leaf leaf-two"></span>
+                <span className="vine-leaf leaf-three"></span>
+              </div>
+              <div className="portal-crown">
+                <span className="crown-leaf crown-leaf-one"></span>
+                <span className="crown-leaf crown-leaf-two"></span>
+                <span className="crown-leaf crown-leaf-three"></span>
+                <span className="crown-leaf crown-leaf-four"></span>
+                <span className="crown-leaf crown-leaf-five"></span>
               </div>
             </div>
           </div>

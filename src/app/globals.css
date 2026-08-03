@@ -37,10 +37,18 @@
   --portal-foliage: #315f46;
   --portal-path: #9aa77f;
   --portal-light: #f4d88a;
+  --portal-bark: #173426;
   --portal-glow-rgb: 168, 213, 168;
   --portal-shadow-rgb: 11, 30, 23;
   --portal-path-rgb: 154, 167, 127;
   --portal-light-rgb: 244, 216, 138;
+
+  /* Botanical Colors */
+  --vine-dark: #163727;
+  --vine-light: #4f7654;
+  --lead-highlight: #76916a;
+  --leaf-bright: #9eb58d;
+  --leaf-mid: #638263;
 
   /* Transparent RGB sources */
   --parchment-rgb: 242, 232, 213;
@@ -277,25 +285,87 @@ p {
   inset: 0;
   background:
     radial-gradient(
-      ellipse at 12% 48%,
-      var(--portal-dark) 0 18%,
-      transparent 19%
+      ellipse at 8% 46%,
+      var(--portal-dark) 0 15%,
+      transparent 16%
     ),
     radial-gradient(
-      ellipse at 88% 42%,
-      var(--portal-dark) 0 20%,
-      transparent 21%
+      ellipse at 18% 34%,
+      var(--portal-foliage) 0 14%,
+      transparent 15%
     ),
     radial-gradient(
-      ellipse at 24% 18%,
-      var(--portal-foliage) 0 16%,
+      ellipse at 4% 62%,
+      var(--green-deep) 0 13%,
+      transparent 14%
+    ),
+    radial-gradient(
+      ellipse at 92% 42%,
+      var(--portal-dark) 0 16%,
       transparent 17%
     ),
     radial-gradient(
-      ellipse at 76% 16%,
+      ellipse at 80% 31%,
+      var(--portal-foliage) 0 15%,
+      transparent 16%
+    ),
+    radial-gradient(
+      ellipse at 96% 60%,
+      var(--green-deep) 0 13%,
+      transparent 14%
+    ),
+    radial-gradient(
+      ellipse at 24% 8%,
+      var(--portal-foliage) 0 17%,
+      transparent 18%
+    ),
+    radial-gradient(
+      ellipse at 74% 7%,
       var(--portal-foliage) 0 18%,
       transparent 19%
     );
+}
+
+.portal-trunk {
+  position: absolute;
+  bottom: -4%;
+  width: 38px;
+  height: 72%;
+  border-radius: 60% 40% 20% 20%;
+  background: linear-gradient(to right, var(--portal-dark), var(--portal-bark));
+  z-index: 1;
+}
+
+portal-trunk::before {
+  content: "";
+  position: absolute;
+  top: 12%;
+  width: 115px;
+  height: 22px;
+  border-radius: 999px;
+  background: var(--portal-bark);
+}
+
+.portal-trunk-left {
+  left: -12px;
+  transform: rotate(-4deg);
+}
+
+.portal-trunk-left::before {
+  left: 12px;
+  transform: rotate(-24deg);
+  transform-origin: left center;
+}
+
+.portal-trunk-right {
+  right: -12px;
+  transform: rotate(4deg);
+}
+
+.portal-trunk-right::before {
+  right: 12px;
+  transform: rotate(24deg);
+  transform-origin: right center;
 }
 
 .portal-glow {
@@ -381,6 +451,167 @@ p {
     opacity: 1;
     transform: translateY(-5px) scale(1.15);
   }
+}
+
+.portal-vine {
+  position: absolute;
+  top: 16%;
+  width: 42px;
+  height: 68%;
+  border-left: 4px solid var(--vine-light);
+  border-radius: 50%;
+  filter: drop-shadow(0 2px 3px rgba(var(--green-deep-rgb), 0.4));
+  pointer-events: none;
+  z-index: 7;
+}
+
+.portal-vine-left {
+  left: 14px;
+  transform: rotate(-7deg);
+}
+
+.portal-vine-right {
+  right: 18px;
+  transform: rotate(4deg);
+}
+
+.portal-vine-left .vine-leaf {
+  left: 12px;
+}
+
+.portal-vine-right .vine-leaf {
+  right: 12px;
+}
+
+.vine-leaf {
+  position: absolute;
+  display: block;
+  z-index: 10;
+  width: 42px;
+  height: 24px;
+  border: 0;
+  border-radius: 100% 0 100% 0;
+  background: linear-gradient(145deg, var(--leaf-bright), var(--leaf-mid));
+  box-shadow:
+    0 4px 10px rgba(var(--green-deep-rgb), 0.45),
+    inset 0 0 0 1px rgba(var(--parchment-rgb), 0.12);
+  opacity: 1;
+}
+
+.vine-leaf::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  width: 70%;
+  height: 1px;
+  background: rgba(var(--parchment-rgb), 0.3);
+}
+
+.portal-vine .leaf-one {
+  top: 18%;
+  left: 8px;
+  transform: rotate(-28deg);
+}
+
+.portal-vine .leaf-two {
+  top: 46%;
+  left: 6px;
+  transform: rotate(22deg) scale(0.9);
+}
+
+.portal-vine .leaf-three {
+  top: 72%;
+  left: 8px;
+  transform: rotate(-32deg) scale(1.05);
+}
+
+.portal-vine-right .vine-leaf {
+  left: auto;
+  right: 8px;
+  transform-origin: right center;
+}
+
+.portal-vine-right .leaf-one {
+  top: 13%;
+  transform: rotate(20deg) scale(0.92);
+}
+
+.portal-vine-right .leaf-two {
+  top: 43%;
+  transform: rotate(-28deg) scale(0.82);
+}
+
+.portal-vine-right .leaf-three {
+  top: 68%;
+  transform: rotate(18deg);
+}
+
+.portal-vine-left .leaf-one {
+  top: 12%;
+  transform: rotate(-38deg) scale(0.88);
+}
+
+.portal-vine-left .leaf-two {
+  top: 42%;
+  transform: rotate(14deg) scale(0.78);
+}
+
+.portal-vine-left .leaf-three {
+  top: 67%;
+  transform: rotate(-30deg);
+}
+
+.portal-crown {
+  position: absolute;
+  top: 17px;
+  left: 50%;
+  width: 72%;
+  height: 90px;
+  border-top: 4px solid var(--vine-light);
+  border-radius: 50% 50% 0 0;
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 8;
+}
+
+.crown-leaf {
+  position: absolute;
+  width: 38px;
+  height: 22px;
+  border-radius: 100% 0 100% 0;
+  background: linear-gradient(145deg, var(--leaf-bright), var(--leaf-mid));
+  box-shadow: 0 4px 10px rgba(var(--green-deep-rgb), 0.4);
+}
+
+.crown-leaf-one {
+  top: 16px;
+  left: 3%;
+  transform: rotate(-42deg) scale(0.72);
+}
+
+.crown-leaf-two {
+  top: 2px;
+  left: 22%;
+  transform: rotate(-20deg) scale(0.9);
+}
+
+.crown-leaf-three {
+  top: -6px;
+  left: 46%;
+  transform: rotate(4deg) scale(1.05);
+}
+
+.crown-leaf-four {
+  top: 3px;
+  right: 20%;
+  transform: rotate(22deg) scale(0.82);
+}
+
+.crown-leaf-five {
+  top: 18px;
+  right: 2%;
+  transform: rotate(40deg) scale(0.68);
 }
 
 /* Recruiter - View - Buttons */
@@ -682,6 +913,28 @@ p {
 
 /* Recruiter View — About Approach */
 
+.about-profile {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  align-items: center;
+  gap: 72px;
+  margin-bottom: 64px;
+}
+
+.about-photo {
+  overflow: hidden;
+  border-radius: 180px 180px 24px 24px;
+  background: var(--surface-sage);
+}
+
+.profile-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
 .about-approach {
   width: min(1180px, calc(100% - 48px));
   margin: 0 auto;
@@ -690,7 +943,7 @@ p {
 
 .about-intro {
   max-width: 760px;
-  margin-bottom: 56px;
+  margin-bottom: 0;
 }
 
 .about-intro h2 {
