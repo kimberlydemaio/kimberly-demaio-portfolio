@@ -1,6 +1,6 @@
 # Kimberly DeMaio Portfolio
 
-An immersive professional portfolio exploring the intersection of business operations, analytics, systems thinking, software development, and creative problem-solving.
+A professional portfolio exploring the intersection of business operations, analytics, systems thinking, software development, and creative problem-solving.
 
 ## Project status
 
@@ -23,7 +23,7 @@ https://www.kimberlydemaio.com
 The portfolio includes two experiences:
 
 - **Recruiter View** — clear, polished, and easy to scan
-- **Explorer View** — immersive, interactive, and designed to reward curiosity
+- **Explorer View** — immersive, interactive, and designed to encourage curiosity
 
 Creative direction:
 
