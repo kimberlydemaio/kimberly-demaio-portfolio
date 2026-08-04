@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const capabilities = [
   "Analytics",
@@ -38,40 +39,22 @@ export default function RecruiterHero() {
         </div>
 
         <div className="hero-visual">
-          <div className="portal-scene">
+          <Link
+            className="portal-scene"
+            href="/explorer"
+            aria-label="Enter Explorer View"
+          >
             <div className="portal-frame">
-              <div className="portal-opening">
-                <div className="portal-trees"></div>
-                <div className="portal-trunk portal-trunk-left"></div>
-                <div className="portal-trunk portal-trunk-right"></div>
-                <div className="portal-glow"></div>
-                <div className="portal-path"></div>
-
-                <span className="portal-light light-one"></span>
-                <span className="portal-light light-two"></span>
-                <span className="portal-light light-three"></span>
-                <span className="portal-light light-four"></span>
-                <span className="portal-light light-five"></span>
-              </div>
-              <div className="portal-vine portal-vine-left">
-                <span className="vine-leaf leaf-one"></span>
-                <span className="vine-leaf leaf-two"></span>
-                <span className="vine-leaf leaf-three"></span>
-              </div>
-              <div className="portal-vine portal-vine-right">
-                <span className="vine-leaf leaf-one"></span>
-                <span className="vine-leaf leaf-two"></span>
-                <span className="vine-leaf leaf-three"></span>
-              </div>
-              <div className="portal-crown">
-                <span className="crown-leaf crown-leaf-one"></span>
-                <span className="crown-leaf crown-leaf-two"></span>
-                <span className="crown-leaf crown-leaf-three"></span>
-                <span className="crown-leaf crown-leaf-four"></span>
-                <span className="crown-leaf crown-leaf-five"></span>
-              </div>
+              <Image
+                src="/images/selected-garden.png"
+                alt="An enchanted garden entrance leading into Explorer View"
+                fill
+                className="portal-image"
+                sizes="(max-width: 960px) 90vw, 40vw"
+                priority
+              />
             </div>
-          </div>
+          </Link>
         </div>
       </section>
 
