@@ -54,6 +54,7 @@ export default function RecruiterHero() {
                 priority
               />
             </div>
+            <p className="portal-caption">A different way in →</p>
           </Link>
         </div>
       </section>

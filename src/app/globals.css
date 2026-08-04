@@ -237,6 +237,24 @@ p {
   transform: scale(1.035);
 }
 
+.portal-caption {
+  margin-top: 18px;
+  color: var(--text-green-soft);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-align: center;
+  text-transform: uppercase;
+  transition:
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.portal-scene:hover .portal-caption {
+  color: var(--green-primary);
+  transform: translateY(-2px);
+}
+
 /* Recruiter - View - Buttons */
 
 .button {
