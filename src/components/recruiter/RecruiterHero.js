@@ -46,7 +46,7 @@ export default function RecruiterHero() {
           >
             <div className="portal-frame">
               <Image
-                src="/images/public/images/garden-entry-to-house.png"
+                src="/images/garden-entry-to-house.png"
                 alt="An enchanted garden entrance leading into Explorer View"
                 fill
                 className="portal-image"
