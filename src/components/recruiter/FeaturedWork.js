@@ -3,30 +3,30 @@ import Link from "next/link";
 const projects = [
   {
     number: "01",
-    category: "Operations Analytics",
+    category: "Automation + People Data",
     title: "Leadership Review Automation",
     description:
-      "Transformed thousands of survey responses into individualized leadership reviews, reducing delivery time from months to days.",
-    result: "90%+ faster turnaround",
-    href: "#",
+      "I built a system that turns thousands of survey responses into individualized leadership reviews—cutting a process that once took months down to just a few days.",
+    result: "From months to days",
+    href: null,
   },
   {
     number: "02",
-    category: "Business Systems",
+    category: "Product + Operations",
     title: "Business Health Score",
     description:
-      "Designed and built an interactive assessment that converts operational inputs into a scored report with prioritized recommendations.",
-    result: "Live production tool",
-    href: "#",
+      "I designed and built an interactive assessment that helps business owners make sense of their operations and see which areas deserve attention first.",
+    result: "Built and launched",
+    href: null,
   },
   {
     number: "03",
     category: "Workforce Analytics",
     title: "Succession Planning System",
     description:
-      "Designed a data-driven succession planning framework that evaluates readiness across performance, tenure, leadership feedback, skills, and role progression.",
-    result: "Leadership proposal approved",
-    href: "#",
+      "I’m building a framework that brings performance, tenure, feedback, skills, and career progression together to make leadership readiness easier to explore.",
+    result: "In development",
+    href: null,
   },
 ];
 
@@ -61,9 +61,13 @@ export default function FeaturedWork() {
             <div className="project-meta">
               <span>{project.result}</span>
 
-              <Link href={project.href} aria-label={`View ${project.title}`}>
-                View project →
-              </Link>
+              {project.href ? (
+                <Link href={project.href} aria-label={`View ${project.title}`}>
+                  View project →
+                </Link>
+              ) : (
+                <span className="project-status">Case study coming soon</span>
+              )}
             </div>
           </article>
         ))}
