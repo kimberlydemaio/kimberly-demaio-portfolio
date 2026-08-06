@@ -506,6 +506,16 @@ p {
   padding: 28px;
   border: 1px solid rgba(24, 57, 47, 0.16);
   background: rgba(236, 232, 221, 0.55);
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(var(--green-primary-rgb), 0.24);
+  box-shadow: 0 16px 38px rgba(var(--green-primary-rgb), 0.8);
 }
 
 .experience-label {
@@ -518,7 +528,8 @@ p {
 }
 
 .experience-card h3 {
-  margin: 0;
+  margin-top: 8;
+  margin-bottom: 12px;
   font-family: var(--font-cormorant), Georgia, serif;
   font-size: 2.2rem;
   font-weight: 500;

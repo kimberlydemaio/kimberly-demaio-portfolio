@@ -3,13 +3,13 @@ const experienceItems = [
     label: "Operations",
     value: "500+ employees",
     detail:
-      "Reporting, workforce analytics, and operational systems across16 locations",
+      "Reporting, workforce analytics, and operational systems across 16 locations",
   },
   {
     label: "Automation",
-    value: "90%+ Faster",
+    value: "Under 1 hour",
     detail:
-      "Reduced complex leadership review delivery from one to two months to half a day",
+      "Reduced complex, manual leadership review delivery from one to two months to an hour or less",
   },
   {
     label: "Systems",
@@ -35,7 +35,6 @@ export default function ExperienceSnapshot() {
           systems.
         </h2>
         <p>
-          {" "}
           I combine big-picture thinking with hands-on building, from
           understanding the real problem to creating the workflows, reports, and
           tools that help solve it.
