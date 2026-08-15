@@ -9,7 +9,7 @@ const experienceItems = [
     label: "Automation",
     value: "Under 1 hour",
     detail:
-      "Reduced complex, manual leadership review delivery from one to two months to an hour or less",
+      "Reduced complex, manual leadership review delivery from two months to an hour or less",
   },
   {
     label: "Systems",

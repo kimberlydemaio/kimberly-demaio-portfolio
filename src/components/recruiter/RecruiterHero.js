@@ -21,10 +21,10 @@ export default function RecruiterHero() {
           <h1 id="hero-heading">I like finding the pattern inside the mess.</h1>
 
           <p className="hero-description">
-            I’m Kimberly. I’m drawn to complicated problems, hidden patterns,
-            and the challenge of turning scattered information into something
-            useful—whether that becomes a system, a visualization, a workflow,
-            or a web application.
+            Hi, I&apos;m Kimberly! I love solving tricky problems and finding
+            patterns in chaos. I enjoy turning scattered ideas into something
+            clear and helpful—whether that&apos;s a system, a process, or a web
+            app.
           </p>
 
           <div className="hero-actions">

@@ -14,11 +14,11 @@ export default function AboutApproach() {
         </div>
 
         <div className="about-intro">
-          <p className="section-eyebrow">About my approach</p>
+          <p className="section-eyebrow">How I think</p>
           <h2>I look beneath the surface before I start building.</h2>
           <p>
             Outside of work, I’m a puzzler, a gamer, a photographer, and someone
-            who is, at times, exploring down a rabbit hole of curiosity.
+            who is always following one curiosity or another down a rabbit hole.
           </p>
         </div>
       </div>

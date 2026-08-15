@@ -323,7 +323,7 @@ p {
 .featured-work {
   width: min(1180px, calc(100% - 48px));
   margin: 0 auto;
-  padding: 120px 0 72px;
+  padding: 120px 0 96px;
 }
 
 .section-heading {
@@ -364,7 +364,7 @@ p {
 }
 
 .project-list {
-  border-top: 1px solid rgba(24, 57, 47, 0.2);
+  border-top: 1px solid rgba(var(--green-primary-rgb), 0.2);
 }
 
 .project-card {
@@ -385,7 +385,6 @@ p {
   transform: translateY(-4px);
   border-color: rgba(var(--green-primary-rgb), 0.28);
   box-shadow: 0 18px 45px rgba(var(--green-primary-rgb), 0.1);
-  padding: 10px;
 }
 
 .project-card:has(.project-status) {
@@ -471,7 +470,7 @@ p {
 .experience-snapshot {
   width: min(1180px, calc(100% - 48px));
   margin: 0 auto;
-  padding: 72px 0 120px;
+  padding: 96px 0;
 }
 
 .experience-intro {
@@ -515,7 +514,7 @@ p {
 .experience-card:hover {
   transform: translateY(-4px);
   border-color: rgba(var(--green-primary-rgb), 0.24);
-  box-shadow: 0 16px 38px rgba(var(--green-primary-rgb), 0.8);
+  box-shadow: 0 16px 38px rgba(var(--green-primary-rgb), 0.08);
 }
 
 .experience-label {
@@ -528,7 +527,7 @@ p {
 }
 
 .experience-card h3 {
-  margin-top: 8;
+  margin-top: 8px;
   margin-bottom: 12px;
   font-family: var(--font-cormorant), Georgia, serif;
   font-size: 2.2rem;
@@ -613,7 +612,7 @@ p {
 .about-approach {
   width: min(1180px, calc(100% - 48px));
   margin: 0 auto;
-  padding: 96px 0 64px;
+  padding: 96px 0;
 }
 
 .about-intro {
@@ -643,17 +642,20 @@ p {
   gap: 24px;
 }
 
+.approach-number {
+  margin-bottom: 42px;
+  color: var(--text-green-soft);
+  font-size: 1.1rem;
+  font-family: var(--font-cormorant), Georgia, serif;
+}
+
 .approach-card {
   min-height: 260px;
   padding: 28px;
-  border-top: 1px solid rgba(24, 57, 47, 0.2);
-}
-
-.approach-number {
-  margin-bottom: 42px;
-  color: #849087;
-  font-size: 1.1rem;
-  font-family: var(--font-cormorant), Georgia, serif;
+  border-top: 1px solid rgba(var(--green-primary-rgb), 0.2);
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease;
 }
 
 .approach-card h3 {
@@ -670,12 +672,17 @@ p {
   line-height: 1.7;
 }
 
+.approach-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(var(--green-primary-rgb), 0.35);
+}
+
 /* Recruiter View - Contact Closing */
 
 .contact-closing {
   width: min(1180px, calc(100% - 48px));
   margin: 0 auto;
-  padding: 64px 0 120px;
+  padding: 96px 0 120px;
   text-align: center;
 }
 
@@ -706,6 +713,35 @@ p {
   flex-wrap: wrap;
   gap: 14px;
   margin-top: 36px;
+}
+
+/* Recruiter View - Visualization Callout */
+.visualization-placeholder {
+  padding: 32px;
+  border: 1px solid rgba(var(--green-primary-rgb), 0.18);
+  border-radius: 24px;
+  background: rgba(var(--surface-sage-rgb), 0.35);
+}
+
+.visualization-placeholder-label {
+  margin-bottom: 10px;
+  color: var(--text-green-soft);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.visualization-placeholder h3 {
+  margin-bottom: 12px;
+}
+
+.visualization-placeholder span {
+  display: inline-block;
+  margin-top: 18px;
+  color: var(--green-primary);
+  font-size: 0.82rem;
+  font-weight: 600;
 }
 
 /* Responsive Styles - Tablet */
@@ -758,9 +794,12 @@ p {
 /* Responsive Styles - Mobile */
 
 @media (max-width: 640px) {
-  .site-header,
-  .recruiter-hero {
-    width: min(100% - 28px, 1180px);
+  .featured-work,
+  .experience-snapshot,
+  .visualization-callout,
+  .about-approach,
+  .contact-closing {
+    padding: 72px 0;
   }
 
   .site-header {
