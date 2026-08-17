@@ -977,6 +977,14 @@ p {
   .approach-grid {
     grid-template-columns: 1fr;
   }
+
+  .foyer-background-desktop {
+    display: none;
+  }
+
+  .foyer-background-mobile {
+    display: block;
+  }
 }
 
 /* Responsive Styles - Mobile */
@@ -1071,14 +1079,6 @@ p {
     width: 100vw;
     height: 100svh;
     aspect-ratio: auto;
-  }
-
-  .foyer-background-desktop {
-    display: none;
-  }
-
-  .foyer-background-mobile {
-    display: block;
   }
 
   .foyer-background {
