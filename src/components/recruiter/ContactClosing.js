@@ -31,6 +31,14 @@ export default function ContactClosing() {
         >
           LinkedIn
         </Link>
+        <Link
+          className="button button-secondary"
+          href="https://www.github.com/kimberlydemaio"
+          target="_blank"
+          rel="noreferrer"
+        >
+          GitHub
+        </Link>
       </div>
     </section>
   );

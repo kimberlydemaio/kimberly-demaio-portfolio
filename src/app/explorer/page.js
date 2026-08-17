@@ -6,7 +6,7 @@ export default function ExplorerHome() {
     <main className="explorer-foyer">
       <div className="foyer-scene">
         <Image
-          src="/images/explorer-foyer-v3.png"
+          src="/images/explorer-foyer-desktop.png"
           alt="An old, ivy-covered foyer welcoming visitors into Explorer View"
           fill
           priority
