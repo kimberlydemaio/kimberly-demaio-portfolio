@@ -33,6 +33,9 @@
   --recruiter-background-rgb: 247, 244, 237;
   --surface-sage-rgb: 223, 227, 215;
   --surface-muted-rgb: 236, 232, 221;
+
+  /* Explorer View */
+  --green-hover-rgb: 41, 79, 66;
 }
 
 * {
@@ -748,17 +751,34 @@ p {
 /* Explorer View - Foyer */
 
 .explorer-foyer {
-  position: relative;
   min-height: 100vh;
-  overflow: hidden;
   display: grid;
   place-items: center;
-  padding: 48px 24px;
+  overflow: hidden;
   background: var(--green-deep);
 }
 
+/*
+ * The scene is now the coordinate system.
+ * The image and all overlay content scale together.
+ */
+.foyer-scene {
+  position: relative;
+  width: 100vw;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+}
+
+.foyer-background-desktop {
+  display: block;
+}
+
+.foyer-background-mobile {
+  display: none;
+}
+
 .foyer-background {
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   z-index: 0;
 }
@@ -767,27 +787,32 @@ p {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: rgba(var(--green-deep-rgb), 0.08);
+  pointer-events: none;
+  background: rgba(var(--green-deep-rgb), 0.04);
 }
 
+/*
+ * These percentages are relative to .foyer-scene,
+ * not the browser window.
+ */
 .foyer-content {
-  position: relative;
+  position: absolute;
   z-index: 2;
-  width: clamp(280px, 24vw, 380px);
+
+  top: 31%;
+  left: 52%;
+
+  width: 29%;
+
   padding: 0;
+  transform: translateX(-50%);
   text-align: center;
-  background: transparent;
-  border: 0;
-  outline: 0;
-  box-shadow: none;
-  backdrop-filter: none;
-  transform: translate(28px, -38px);
 }
 
 .foyer-eyebrow {
-  margin-bottom: 10px;
+  margin: 0 0 2.5%;
   color: var(--green-primary);
-  font-size: 0.68rem;
+  font-size: clamp(0.55rem, 0.8vw, 0.78rem);
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -797,17 +822,17 @@ p {
   margin: 0;
   color: var(--green-deep);
   font-family: var(--font-cormorant), Georgia, serif;
-  font-size: clamp(2rem, 2.6vw, 3.2rem);
+  font-size: clamp(2rem, 3.4vw, 3.8rem);
   font-weight: 600;
   letter-spacing: -0.03em;
   line-height: 0.95;
 }
 
 .foyer-intro {
-  max-width: 100%;
-  margin: 14px auto 0;
+  width: 92%;
+  margin: 5% auto 0;
   color: var(--green-primary);
-  font-size: clamp(0.78rem, 0.9vw, 0.9rem);
+  font-size: clamp(0.72rem, 1vw, 1rem);
   line-height: 1.5;
 }
 
@@ -815,62 +840,95 @@ p {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-top: 16px;
-  padding: 10px 16px;
-  border: 1px solid var(--green-primary);
-  background: var(--green-primary);
+
+  margin-top: 7%;
+  padding: 11px 20px;
+
+  border: 1px solid rgba(140, 108, 60, 0.82);
+  border-radius: 2px;
+
+  background:
+    radial-gradient(
+      circle at 30% 20%,
+      rgba(255, 255, 255, 0.04),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 75% 70%,
+      rgba(var(--green-deep-rgb), 0.35),
+      transparent 40%
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(var(--green-primary-rgb), 0.96),
+      rgba(var(--green-deep-rgb), 0.98)
+    );
+
   color: var(--parchment);
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
+
+  font-size: clamp(0.55rem, 0.75vw, 0.72rem);
+  font-weight: 600;
+  letter-spacing: 0.12em;
   text-decoration: none;
   text-transform: uppercase;
+  white-space: nowrap;
+
+  box-shadow:
+    inset 0 0 0 1px rgba(140, 108, 60, 0.32),
+    inset 0 2px 4px rgba(255, 255, 255, 0.03),
+    inset 0 -5px 12px rgba(var(--green-deep-rgb), 0.58),
+    0 3px 8px rgba(var(--green-deep-rgb), 0.3);
+
+  text-shadow:
+    0 1px 0 rgba(var(--green-deep-rgb), 0.9),
+    0 0 3px rgba(var(--parchment-rgb), 0.14);
+
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
 }
 
 .foyer-button:hover {
-  background: var(--green-hover);
   transform: translateY(-2px);
+
+  border-color: rgba(176, 138, 74, 0.95);
+
+  box-shadow:
+    inset 0 0 0 1px rgba(176, 138, 74, 0.42),
+    inset 0 2px 4px rgba(255, 255, 255, 0.05),
+    inset 0 -4px 10px rgba(var(--green-deep-rgb), 0.5),
+    0 6px 14px rgba(var(--green-deep-rgb), 0.38);
 }
 
 .foyer-clue {
   position: absolute;
   z-index: 2;
-  bottom: 28px;
+  bottom: 3%;
   left: 50%;
-  width: min(520px, calc(100% - 48px));
+
+  width: 42%;
   margin: 0;
+
   transform: translateX(-50%);
+
   color: var(--parchment);
   font-family: var(--font-cormorant), Georgia, serif;
-  font-size: 1rem;
+  font-size: clamp(0.72rem, 1vw, 1rem);
   font-style: italic;
   line-height: 1.4;
   text-align: center;
+
   text-shadow: 0 2px 8px rgba(var(--green-deep-rgb), 0.9);
 }
 
 /* Explorer View — Large Screens */
 
-@media (min-width: 1500px) {
-  .foyer-content {
-    width: min(440px, 28vw);
-    transform: translate(28px, -52px);
-  }
-
-  .foyer-content h1 {
-    font-size: clamp(2.8rem, 3vw, 3.6rem);
-  }
-
-  .foyer-intro {
-    max-width: 380px;
-    font-size: 0.95rem;
-  }
-
-  .foyer-button {
-    padding: 12px 20px;
-    font-size: 0.72rem;
-  }
-}
+/*
+ * No foyer-specific large-screen override needed.
+ * The foyer content is now positioned relative to .foyer-scene
+ * and scales with the scene itself.
+ */
 
 /* Responsive Styles - Tablet */
 
@@ -910,43 +968,14 @@ p {
   .experience-grid {
     grid-template-columns: 1fr;
   }
+
   .visualization-callout {
     grid-template-columns: 1fr;
     gap: 40px;
   }
+
   .approach-grid {
     grid-template-columns: 1fr;
-  }
-  .foyer-content {
-    width: min(270px, 44vw);
-    transform: translate(14px, -22px);
-  }
-
-  .foyer-eyebrow {
-    margin-bottom: 8px;
-    font-size: 0.58rem;
-    letter-spacing: 0.14em;
-  }
-
-  .foyer-content h1 {
-    font-size: clamp(1.9rem, 5vw, 2.4rem);
-  }
-
-  .foyer-intro {
-    max-width: 250px;
-    margin-top: 12px;
-    font-size: 0.74rem;
-    line-height: 1.45;
-  }
-
-  .foyer-button {
-    margin-top: 14px;
-    padding: 9px 14px;
-    font-size: 0.6rem;
-  }
-
-  .foyer-clue {
-    font-size: 0.88rem;
   }
 }
 
@@ -1005,13 +1034,16 @@ p {
     min-height: auto;
     padding: 24px;
   }
+
   .visualization-callout {
     width: min(100% - 28px, 1180px);
     padding: 72px 0;
   }
+
   .visualization-preview {
     min-height: 300px;
   }
+
   .about-approach {
     width: min(100% - 28px, 1180px);
     padding: 72px 0 88px;
@@ -1033,5 +1065,60 @@ p {
 
   .contact-actions .button {
     width: 100%;
+  }
+
+  .foyer-scene {
+    width: 100vw;
+    height: 100svh;
+    aspect-ratio: auto;
+  }
+
+  .foyer-background-desktop {
+    display: none;
+  }
+
+  .foyer-background-mobile {
+    display: block;
+  }
+
+  .foyer-background {
+    object-fit: cover;
+    object-position: center;
+    transform: none;
+  }
+
+  .foyer-content {
+    top: 35%;
+    left: 50%;
+    width: 44%;
+  }
+
+  .foyer-eyebrow {
+    font-size: 0.46rem;
+    letter-spacing: 0.12em;
+  }
+
+  .foyer-content h1 {
+    font-size: clamp(1.6rem, 7vw, 2.2rem);
+  }
+
+  .foyer-intro {
+    width: 92%;
+    margin-top: 5%;
+    font-size: clamp(0.56rem, 2.3vw, 0.7rem);
+    line-height: 1.4;
+  }
+
+  .foyer-button {
+    margin-top: 7%;
+    padding: 8px 12px;
+    font-size: 0.52rem;
+    letter-spacing: 0.08em;
+  }
+
+  .foyer-clue {
+    bottom: 2.5%;
+    width: 78%;
+    font-size: 0.72rem;
   }
 }

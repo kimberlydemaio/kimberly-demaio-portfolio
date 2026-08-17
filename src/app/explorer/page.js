@@ -4,33 +4,46 @@ import Link from "next/link";
 export default function ExplorerHome() {
   return (
     <main className="explorer-foyer">
-      <Image
-        src="/images/explorer-foyer-v3.png"
-        alt="An old, ivy-covered foyer welcoming visitors into Explorer View"
-        fill
-        priority
-        className="foyer-background"
-      />
+      <div className="foyer-scene">
+        <Image
+          src="/images/explorer-foyer-v3.png"
+          alt="An old, ivy-covered foyer welcoming visitors into Explorer View"
+          fill
+          priority
+          className="foyer-background foyer-background-desktop"
+          sizes="100vw"
+        />
 
-      <div className="foyer-overlay" />
+        <Image
+          src="/images/explorer-foyer-mobile.png"
+          alt=""
+          fill
+          priority
+          className="foyer-background foyer-background-mobile"
+          sizes="100vw"
+        />
 
-      <section className="foyer-content">
-        <p className="foyer-eyebrow">Welcome, Explorer</p>
+        <div className="foyer-overlay" />
 
-        <h1>Welcome in.</h1>
+        <section className="foyer-content">
+          <p className="foyer-eyebrow">Hello, Explorer</p>
 
-        <p className="foyer-intro">
-          This is where curiosity leads and details tell stories. The Map Room
-          is your guide to everything within.
+          <h1>Welcome in.</h1>
+
+          <p className="foyer-intro">
+            Curiosity is the compass here. The Map Room will help you choose
+            where to go next.
+          </p>
+
+          <Link className="foyer-button" href="/explorer/map-room">
+            Enter the Map Room →
+          </Link>
+        </section>
+
+        <p className="foyer-clue">
+          Not everything is on the map. Some things you have to find.
         </p>
-
-        <Link className="foyer-button" href="/explorer/map-room">
-          Enter the Map Room →
-        </Link>
-      </section>
-      <p className="foyer-clue">
-        Not everything is on the map. Some things you have to find.
-      </p>
+      </div>
     </main>
   );
 }
