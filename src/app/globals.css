@@ -376,7 +376,7 @@ p {
   align-items: center;
   gap: 32px;
   min-height: 210px;
-  padding: 36px 0;
+  padding: 36px 6px;
   border-bottom: 1px solid rgba(24, 57, 47, 0.2);
   transition:
     transform 220ms ease,
