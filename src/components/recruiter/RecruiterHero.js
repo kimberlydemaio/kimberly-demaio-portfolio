@@ -15,10 +15,10 @@ export default function RecruiterHero() {
       <section className="recruiter-hero" aria-labelledby="hero-heading">
         <div className="hero-copy">
           <p className="eyebrow">
-            Operations, data, systems & a little curiosity
+            Operations. Data. Analytics. Systems. Full-stack Dev.
           </p>
 
-          <h1 id="hero-heading">I like finding the pattern inside the mess.</h1>
+          <h1 id="hero-heading">I like making things make sense.</h1>
 
           <p className="hero-description">
             Hi, I&apos;m Kimberly! I love solving tricky problems and finding

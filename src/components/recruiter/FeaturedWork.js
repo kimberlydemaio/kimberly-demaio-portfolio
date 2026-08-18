@@ -47,7 +47,7 @@ export default function FeaturedWork() {
         <p className="section-eyebrow">Selected work</p>
 
         <div className="section-heading-row">
-          <h2>Built from real problems and a lot of curiosity.</h2>
+          <h2>Built to solve real problems. Fueled by genuine curiosity.</h2>
 
           <p>
             These projects span analytics, operations, automation, and product
