@@ -39,7 +39,7 @@ export default function ExplorerHome() {
             where to go next.
           </p>
 
-          <Link className="foyer-button" href="/explorer/map-room">
+          <Link className="foyer-button" href="/explorer/">
             Enter the Map Room →
           </Link>
         </section>
