@@ -1017,14 +1017,90 @@ p {
   text-align: center;
 }
 
-.map-back-link {
+.map-hotspot-foyer {
+  top: 30%;
+  left: 43.5%;
+  width: 14%;
+  height: 14%;
+}
+
+.map-hotspot-map-room {
+  top: 29%;
+  left: 25.5%;
+  width: 14%;
+  height: 14%;
+}
+
+.map-hotspot-reading-room {
+  top: 7%;
+  left: 43%;
+  width: 14%;
+  height: 14%;
+}
+
+.map-hotspot-glasshouse {
+  top: 28%;
+  left: 64%;
+  width: 14%;
+  height: 14%;
+}
+
+.map-hotspot-office {
+  top: 55%;
+  left: 40%;
+  width: 14%;
+  height: 14%;
+}
+
+.map-hotspot-observatory {
+  top: 45%;
+  left: 60%;
+  width: 14%;
+  height: 14%;
+}
+
+.map-hotspot-filing-cabinet {
+  top: 57%;
+  left: 60%;
+  width: 14%;
+  height: 14%;
+}
+
+.map-key {
   position: absolute;
   z-index: 3;
-  bottom: 3%;
-  left: 3%;
-  color: var(--parchment);
-  font-size: 0.82rem;
-  text-decoration: none;
+  top: 60%;
+  left: 25%;
+  font-size: 0.75em;
+}
+
+.map-key-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.map-key-line {
+  position: relative;
+  width: 48px;
+  height: 1px;
+  background: var(--ink);
+}
+
+.map-key-line::after {
+  content: "";
+  position: absolute;
+  right: -6px;
+  top: 50%;
+
+  width: 0;
+  height: 0;
+
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 6px solid var(--ink);
+
+  transform: translateY(-50%);
 }
 
 /* Explorer View — Large Screens */
@@ -1265,5 +1341,62 @@ p {
     object-fit: contain;
     object-position: center;
     transform: scale(1.12);
+  }
+
+  .map-hotspot-foyer {
+    top: 30%;
+    left: 43.5%;
+    width: 14%;
+    height: 14%;
+  }
+
+  .map-hotspot-map-room {
+    top: 29%;
+    left: 19%;
+    width: 14%;
+    height: 14%;
+  }
+
+  .map-hotspot-reading-room {
+    top: 15%;
+    left: 42%;
+    width: 20%;
+    height: 14%;
+  }
+
+  .map-hotspot-glasshouse {
+    top: 29%;
+    left: 68%;
+    width: 14%;
+    height: 14%;
+  }
+
+  .map-hotspot-office {
+    top: 45%;
+    left: 38%;
+    width: 14%;
+    height: 14%;
+  }
+
+  .map-hotspot-observatory {
+    top: 45%;
+    left: 64%;
+    width: 14%;
+    height: 14%;
+  }
+
+  .map-hotspot-filing-cabinet {
+    top: 53%;
+    left: 66%;
+    width: 14%;
+    height: 14%;
+  }
+
+  .map-key {
+    position: absolute;
+    z-index: 3;
+    top: 63%;
+    left: 25%;
+    font-size: 0.75em;
   }
 }

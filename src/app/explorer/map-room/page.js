@@ -37,6 +37,11 @@ const mapRooms = [
     label: "Filing Cabinet",
     href: "/explorer/filing-cabinet",
   },
+  {
+    id: "observatory",
+    label: "Observatory",
+    href: "/explorer/observatory",
+  },
 ];
 
 export default function MapRoomPage() {
@@ -64,20 +69,53 @@ export default function MapRoomPage() {
         <div className="map-overlay" />
 
         <div className="map-hotspots">
-          {mapRooms.map((room) => (
-            <Link
-              key={room.id}
-              href={room.href}
-              className={`map-hotspot map-hotspot-${room.id}`}
-            >
-              <span>{room.label}</span>
-            </Link>
-          ))}
+          <Link className="map-hotspot map-hotspot-foyer" href="/explorer">
+            Foyer
+          </Link>
+          <Link
+            className="map-hotspot map-hotspot-reading-room"
+            href="/reading-room"
+          >
+            Reading Room
+          </Link>
+          <Link className="map-hotspot map-hotspot-glasshouse" href="#">
+            Glasshouse
+          </Link>
+          <Link className="map-hotspot map-hotspot-office" href="#">
+            Office
+          </Link>
+          <Link className="map-hotspot map-hotspot-map-room" href="/map-room">
+            Map Room
+          </Link>
+          <Link
+            className="map-hotspot map-hotspot-observatory"
+            href="/observatory"
+          >
+            Observatory
+          </Link>
+          <Link
+            className="map-hotspot map-hotspot-filing-cabinet"
+            href="/filing-cabinet"
+          >
+            Filing Cabinet
+          </Link>
         </div>
+        <div className="map-key">
+          <div className="map-key-row map-key-primary">
+            <span className="map-key-line"></span>
+            <span>Primary Path</span>
+          </div>
 
-        <Link className="map-back-link" href="/explorer">
-          ← Back to the Foyer
-        </Link>
+          <div className="map-key-row map-key-secondary">
+            <span className="map-key-line"></span>
+            <span>Secondary Path</span>
+          </div>
+
+          <div className="map-key-row map-key-secret">
+            <span className="map-key-line"></span>
+            <span>Secret</span>
+          </div>
+        </div>
       </div>
     </main>
   );
