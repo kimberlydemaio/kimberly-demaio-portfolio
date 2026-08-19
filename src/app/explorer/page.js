@@ -23,6 +23,10 @@ export default function ExplorerHome() {
           sizes="100vw"
         />
 
+        <Link className="foyer-recruiter-link" href="/">
+          ← Recruiter View
+        </Link>
+
         <div className="foyer-overlay" />
 
         <section className="foyer-content">

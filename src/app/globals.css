@@ -922,6 +922,30 @@ p {
   text-shadow: 0 2px 8px rgba(var(--green-deep-rgb), 0.9);
 }
 
+.foyer-recruiter-link {
+  position: absolute;
+  z-index: 3;
+  bottom: 3%;
+  left: 3%;
+
+  color: var(--parchment);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+
+  text-shadow: 0 2px 8px rgba(var(--green-deep-rgb), 0.9);
+
+  transition:
+    transform 180ms ease,
+    opacity 180ms ease;
+}
+
+.foyer-recruiter-link:hover {
+  transform: translateX(-3px);
+  opacity: 0.8;
+}
+
 /* Explorer View - Map Room */
 
 .map-room {
