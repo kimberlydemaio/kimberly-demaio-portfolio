@@ -755,7 +755,7 @@ p {
   display: grid;
   place-items: center;
   overflow: hidden;
-  background: var(--green-deep);
+  background: var(--ink);
 }
 
 /*
@@ -953,14 +953,7 @@ p {
   display: grid;
   place-items: center;
   overflow: hidden;
-  background: var(--green-deep);
-}
-
-.map-scene {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+  background: var(--ink);
 }
 
 .map-scene {
@@ -1188,6 +1181,83 @@ p {
   }
 }
 
+/* Responsive Styles - Landscape */
+
+@media screen and (max-width: 960px) and (orientation: landscape) {
+  .foyer-background-desktop {
+    display: block;
+  }
+
+  .foyer-background-mobile {
+    display: none;
+  }
+
+  .map-background-desktop {
+    display: block;
+  }
+
+  .map-background-mobile {
+    display: none;
+  }
+
+  .map-hotspot-foyer {
+    top: 30%;
+    left: 43.5%;
+    width: 14%;
+    height: 14%;
+  }
+
+  .map-hotspot-map-room {
+    top: 29%;
+    left: 25.5%;
+    width: 14%;
+    height: 14%;
+  }
+
+  .map-hotspot-reading-room {
+    top: 7%;
+    left: 43%;
+    width: 14%;
+    height: 14%;
+  }
+
+  .map-hotspot-glasshouse {
+    top: 28%;
+    left: 64%;
+    width: 14%;
+    height: 14%;
+  }
+
+  .map-hotspot-office {
+    top: 55%;
+    left: 40%;
+    width: 14%;
+    height: 14%;
+  }
+
+  .map-hotspot-observatory {
+    top: 45%;
+    left: 60%;
+    width: 14%;
+    height: 14%;
+  }
+
+  .map-hotspot-filing-cabinet {
+    top: 57%;
+    left: 60%;
+    width: 14%;
+    height: 14%;
+  }
+
+  .map-key {
+    position: absolute;
+    z-index: 3;
+    top: 60%;
+    left: 25%;
+    font-size: 0.75em;
+  }
+}
+
 /* Responsive Styles - Mobile */
 
 @media (max-width: 640px) {
@@ -1318,7 +1388,7 @@ p {
   }
 
   .foyer-clue {
-    bottom: 2.5%;
+    bottom: 5%;
     width: 78%;
     font-size: 0.72rem;
   }
