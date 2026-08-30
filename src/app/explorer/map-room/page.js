@@ -70,34 +70,68 @@ export default function MapRoomPage() {
 
         <div className="map-hotspots">
           <Link className="map-hotspot map-hotspot-foyer" href="/explorer">
-            Foyer
+            <span className="map-hotspot-text">
+              <span className="map-hotspot-title">Foyer</span>
+            </span>
           </Link>
           <Link
             className="map-hotspot map-hotspot-reading-room"
             href="/reading-room"
           >
-            Reading Room
+            <span className="map-hotspot-text">
+              <span className="map-hotspot-title">Reading Room</span>
+              <span className="map-hotspot-description">
+                about / how I think
+              </span>
+            </span>
           </Link>
           <Link className="map-hotspot map-hotspot-glasshouse" href="#">
-            Glasshouse
+            <span className="map-hotspot-text">
+              <span className="map-hotspot-title">Glasshouse</span>
+              <span className="map-hotspot-description">recruiter-view</span>
+            </span>
           </Link>
           <Link className="map-hotspot map-hotspot-office" href="#">
-            Office
+            <span className="map-hotspot-text">
+              <span className="map-hotspot-title">Office</span>
+              <span className="map-hotspot-description">
+                workspace /<br />
+                case files
+              </span>
+            </span>
           </Link>
           <Link className="map-hotspot map-hotspot-map-room" href="/map-room">
-            Map Room
+            <span className="map-hotspot-text">
+              <span className="map-hotspot-title">Map Room</span>
+              <span className="map-hotspot-description">(You are here)</span>
+            </span>
           </Link>
           <Link
             className="map-hotspot map-hotspot-observatory"
             href="/observatory"
           >
-            Observatory
+            <span className="map-hotspot-text">
+              <span className="map-hotspot-title">Observatory</span>
+              <span className="map-hotspot-description">
+                interactive data /<br />
+                visual explorations
+              </span>
+            </span>
           </Link>
           <Link
             className="map-hotspot map-hotspot-filing-cabinet"
             href="/filing-cabinet"
           >
-            Filing Cabinet
+            <span className="map-hotspot-text">
+              <span className="map-hotspot-title">
+                Filing
+                <br /> Cabinet
+              </span>
+              <span className="map-hotspot-description">
+                experiments /<br />
+                one-offs
+              </span>
+            </span>
           </Link>
         </div>
         <div className="map-key">

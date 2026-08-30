@@ -985,6 +985,7 @@ p {
 }
 
 .map-hotspot {
+  font-family: var(--font-caveat);
   position: absolute;
   display: grid;
   place-items: center;
@@ -995,6 +996,8 @@ p {
     background 180ms ease,
     box-shadow 180ms ease,
     transform 180ms ease;
+  align-content: center;
+  opacity: 0.8;
 }
 
 .map-hotspot:hover {
@@ -1003,68 +1006,92 @@ p {
   transform: scale(1.015);
 }
 
+.map-hotspot-title {
+  font-size: 1.4em;
+  line-height: 0.8em;
+}
+
+.map-hotspot-description {
+  font-size: 0.9em;
+  margin-top: 0.1em;
+}
+
 .map-hotspot span {
-  font-family: var(--font-cormorant), Georgia, serif;
-  font-size: clamp(0.8rem, 1.2vw, 1.3rem);
   font-weight: 600;
   text-align: center;
 }
 
+.map-hotspot-text {
+  display: grid;
+  place-items: center;
+  transform: rotate(-2deg);
+}
+
 .map-hotspot-foyer {
+  font-size: 1.2em;
   top: 30%;
   left: 43.5%;
   width: 14%;
   height: 14%;
+  border-radius: 50%;
 }
 
 .map-hotspot-map-room {
-  top: 29%;
-  left: 25.5%;
-  width: 14%;
-  height: 14%;
+  top: 31%;
+  left: 26%;
+  width: 12%;
+  height: 12%;
 }
 
 .map-hotspot-reading-room {
-  top: 7%;
+  top: 9%;
   left: 43%;
   width: 14%;
-  height: 14%;
+  height: 12%;
 }
 
 .map-hotspot-glasshouse {
-  top: 28%;
+  top: 30%;
   left: 64%;
   width: 14%;
-  height: 14%;
+  height: 12%;
+  transform: rotate(0deg);
 }
 
 .map-hotspot-office {
-  top: 55%;
+  top: 57%;
   left: 40%;
   width: 14%;
-  height: 14%;
+  height: 12%;
 }
 
 .map-hotspot-observatory {
-  top: 45%;
-  left: 60%;
-  width: 14%;
-  height: 14%;
+  font-size: 0.8em;
+  top: 47%;
+  left: 62%;
+  width: 10%;
+  height: 9%;
+  transform: rotate(0deg);
 }
 
 .map-hotspot-filing-cabinet {
-  top: 57%;
-  left: 60%;
-  width: 14%;
-  height: 14%;
+  font-size: 0.8em;
+  line-height: 0.99em;
+  gap: 0.5px;
+  top: 61%;
+  left: 62%;
+  width: 10%;
+  height: 9%;
+  transform: rotate(0deg);
 }
 
 .map-key {
   position: absolute;
   z-index: 3;
   top: 60%;
-  left: 25%;
-  font-size: 0.75em;
+  left: 26%;
+  font-size: 0.9em;
+  font-family: var(--font-caveat);
 }
 
 .map-key-row {
@@ -1094,6 +1121,19 @@ p {
   border-left: 6px solid var(--ink);
 
   transform: translateY(-50%);
+}
+
+.map-key-secondary .map-key-line::after {
+  width: 6px;
+  height: 6px;
+  right: -7px;
+  border-radius: 50%;
+  border: 2px solid var(--ink);
+}
+
+.map-key-secret .map-key-line {
+  border-top: 1px dashed var(--ink);
+  background: transparent;
 }
 
 /* Explorer View — Large Screens */
@@ -1413,29 +1453,33 @@ p {
     transform: scale(1.12);
   }
 
+  .map-hotspot {
+    font-size: 0.8em;
+  }
+
   .map-hotspot-foyer {
-    top: 30%;
+    top: 31%;
     left: 43.5%;
     width: 14%;
     height: 14%;
   }
 
   .map-hotspot-map-room {
-    top: 29%;
+    top: 32%;
     left: 19%;
     width: 14%;
     height: 14%;
   }
 
   .map-hotspot-reading-room {
-    top: 15%;
+    top: 20%;
     left: 42%;
     width: 20%;
     height: 14%;
   }
 
   .map-hotspot-glasshouse {
-    top: 29%;
+    top: 32%;
     left: 68%;
     width: 14%;
     height: 14%;
@@ -1449,23 +1493,26 @@ p {
   }
 
   .map-hotspot-observatory {
-    top: 45%;
+    top: 45.5%;
     left: 64%;
     width: 14%;
     height: 14%;
+    font-size: 0.65em;
   }
 
   .map-hotspot-filing-cabinet {
-    top: 53%;
-    left: 66%;
+    top: 51.5%;
+    left: 63%;
     width: 14%;
     height: 14%;
+    font-size: 0.5em;
+    line-height: 0.75em;
   }
 
   .map-key {
     position: absolute;
     z-index: 3;
-    top: 63%;
+    top: 61%;
     left: 25%;
     font-size: 0.75em;
   }
