@@ -95,8 +95,7 @@ export default function MapRoomPage() {
             <span className="map-hotspot-text">
               <span className="map-hotspot-title">Office</span>
               <span className="map-hotspot-description">
-                workspace /<br />
-                case files
+                workspace / case files
               </span>
             </span>
           </Link>
