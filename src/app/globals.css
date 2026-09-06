@@ -966,6 +966,7 @@ p {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  container-type: inline-size;
 }
 
 .map-background-desktop {
@@ -1053,6 +1054,7 @@ p {
   left: 43%;
   width: 14%;
   height: 12%;
+  font-size: 1.6cqw;
 }
 
 .map-hotspot-glasshouse {
