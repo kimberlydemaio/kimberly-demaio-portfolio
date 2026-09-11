@@ -3,15 +3,24 @@ import Link from "next/link";
 const projects = [
   {
     number: "01",
-    category: "Automation + People Data",
-    title: "Leadership Review Automation",
+    category: "Product + Creative Development",
+    title: "Custom Tee-Shirt Generator",
     description:
-      "I built a system that turns thousands of survey responses into individualized leadership reviews—cutting a process that once took months down to minutes.",
-    result: "From months to minutes",
+      "A personalized shirt-building experience that turns user choices into a custom design, with plans for customer-submitted gallery features after purchase.",
+    result: "In development",
     href: null,
   },
   {
     number: "02",
+    category: "AI + Full-Stack Product",
+    title: "Jobnostic",
+    description:
+      "I’m building a job discovery platform that analyzes a user’s resume, builds a profile around their experience and strengths, and surfaces better-fit opportunities without making them sift through another traditional job board.",
+    result: "In development",
+    href: null,
+  },
+  {
+    number: "03",
     category: "Product + Operations",
     title: "Business Health Score",
     description:
@@ -20,22 +29,12 @@ const projects = [
     href: null,
   },
   {
-    number: "03",
-    category: "Workforce Analytics",
-    title: "Succession Planning System",
-    description:
-      "I’m building a framework that brings performance, tenure, feedback, skills, and career progression together to make leadership readiness easier to explore.",
-    result: "In development",
-    href: null,
-  },
-
-  {
     number: "04",
-    category: "Product + Creative Development",
-    title: "Custom Tee-Shirt Generator",
+    category: "Automation + People Data",
+    title: "Leadership Review Automation",
     description:
-      "A personalized shirt-building experience that turns user choices into a custom design, with plans for customer-submitted gallery features after purchase.",
-    result: "In development",
+      "I built a system that turns thousands of survey responses into individualized leadership reviews—cutting a process that once took months down to minutes.",
+    result: "From months to minutes",
     href: null,
   },
 ];

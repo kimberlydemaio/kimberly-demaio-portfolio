@@ -35,18 +35,20 @@ export default function RecruiterHero() {
         </div>
 
         <div className="hero-visual">
-          <div className="portal-scene">
-            <div className="portal-frame">
-              <Image
-                src="/images/garden-entry-to-house.png"
-                alt="An ivy-covered garden path leading to an old house"
-                fill
-                className="portal-image"
-                sizes="(max-width: 960px) 90vw, 40vw"
-                priority
-              />
-            </div>
+          <div className="hero-image-frame">
+            <Image
+              src="/images/hero-visual-v2.png"
+              alt="A warm editorial workspace with books, vintage details, and creative tools"
+              fill
+              className="hero-image"
+              sizes="(max-width: 960px) 90vw, 42vw"
+              priority
+            />
           </div>
+
+          <p className="hero-image-note">
+            Curious by nature. Builder by habit.
+          </p>
         </div>
       </section>
 
