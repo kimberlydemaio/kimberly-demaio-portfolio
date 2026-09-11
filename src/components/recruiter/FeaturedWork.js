@@ -8,7 +8,7 @@ const projects = [
     description:
       "A personalized shirt-building experience that turns user choices into a custom design, with plans for customer-submitted gallery features after purchase.",
     result: "In development",
-    href: null,
+    href: "/projects/custom-tee-shirt-generator",
   },
   {
     number: "02",
@@ -17,7 +17,7 @@ const projects = [
     description:
       "I’m building a job discovery platform that analyzes a user’s resume, builds a profile around their experience and strengths, and surfaces better-fit opportunities without making them sift through another traditional job board.",
     result: "In development",
-    href: null,
+    href: "/projects/jobnostic",
   },
   {
     number: "03",
@@ -26,12 +26,12 @@ const projects = [
     description:
       "I designed and built an interactive assessment that helps business owners make sense of their operations and see which areas deserve attention first.",
     result: "Built and launched",
-    href: null,
+    href: "/projects/business-health-score",
   },
   {
     number: "04",
     category: "Automation + People Data",
-    title: "Leadership Review Automation",
+    title: "Review Gen",
     description:
       "I built a system that turns thousands of survey responses into individualized leadership reviews—cutting a process that once took months down to minutes.",
     result: "From months to minutes",
