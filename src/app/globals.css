@@ -33,9 +33,6 @@
   --recruiter-background-rgb: 247, 244, 237;
   --surface-sage-rgb: 223, 227, 215;
   --surface-muted-rgb: 236, 232, 221;
-
-  /* Explorer View */
-  --green-hover-rgb: 41, 79, 66;
 }
 
 * {
@@ -98,7 +95,7 @@ p {
   margin: 0 auto;
   min-height: 92px;
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: auto 1fr;
   align-items: center;
   gap: 32px;
   border-bottom: 1px solid rgba(var(--green-primary-rgb), 0.18);
@@ -114,38 +111,18 @@ p {
 
 .primary-nav {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 28px;
 }
 
-.primary-nav a,
-.view-option {
+.primary-nav a {
   color: var(--text-green-dark);
   font-size: 0.88rem;
   text-decoration: none;
 }
 
-.primary-nav a:hover,
-.view-option:hover {
+.primary-nav a:hover {
   color: var(--green-primary);
-}
-
-.view-toggle {
-  display: flex;
-  gap: 6px;
-  padding: 5px;
-  border: 1px solid rgba(var(--green-primary-rgb), 0.22);
-  border-radius: 999px;
-}
-
-.view-option {
-  padding: 8px 12px;
-  border-radius: 999px;
-}
-
-.view-option-active {
-  background: var(--green-primary);
-  color: var(--recruiter-background);
 }
 
 /* Recruiter View - Hero Section */
@@ -206,10 +183,14 @@ p {
   place-items: center;
 }
 
+/*
+ * Temporary hero image styling.
+ * We will replace/refine this during the workspace-inspired hero redesign.
+ */
+
 .portal-scene {
   display: block;
   width: min(100%, 430px);
-  text-decoration: none;
 }
 
 .portal-frame {
@@ -223,47 +204,14 @@ p {
   box-shadow:
     0 28px 70px rgba(var(--green-primary-rgb), 0.2),
     0 0 0 12px rgba(var(--surface-sage-rgb), 0.45);
-  transition:
-    transform 300ms ease,
-    box-shadow 300ms ease;
 }
 
 .portal-image {
   object-fit: cover;
   object-position: center;
-  transition: transform 600ms ease;
 }
 
-.portal-scene:hover .portal-frame {
-  transform: translateY(-5px);
-  box-shadow:
-    0 34px 85px rgba(var(--green-primary-rgb), 0.26),
-    0 0 0 12px rgba(var(--surface-sage-rgb), 0.55);
-}
-
-.portal-scene:hover .portal-image {
-  transform: scale(1.035);
-}
-
-.portal-caption {
-  margin-top: 18px;
-  color: var(--text-green-soft);
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-align: center;
-  text-transform: uppercase;
-  transition:
-    color 180ms ease,
-    transform 180ms ease;
-}
-
-.portal-scene:hover .portal-caption {
-  color: var(--green-primary);
-  transform: translateY(-2px);
-}
-
-/* Recruiter - View - Buttons */
+/* Recruiter View - Buttons */
 
 .button {
   display: inline-flex;
@@ -295,16 +243,7 @@ p {
   background: var(--green-hover);
 }
 
-.button-secondary {
-  background: transparent;
-  color: var(--green-primary);
-}
-
-.button-secondary:hover {
-  background: rgba(24, 57, 47, 0.07);
-}
-
-/* Recruiter - View - Identity Strip */
+/* Recruiter View - Identity Strip */
 
 .identity-strip {
   width: 100%;
@@ -326,7 +265,7 @@ p {
   text-transform: uppercase;
 }
 
-/* Responsive Styles - Featured Work */
+/* Recruiter View - Featured Work */
 
 .featured-work {
   width: min(1180px, calc(100% - 48px));
@@ -473,7 +412,7 @@ p {
   text-transform: uppercase;
 }
 
-/* Recruiter View — Experience Snapshot */
+/* Recruiter View - Experience Snapshot */
 
 .experience-snapshot {
   width: min(1180px, calc(100% - 48px));
@@ -549,7 +488,7 @@ p {
   line-height: 1.7;
 }
 
-/* Recruiter View — Visualization Callout */
+/* Recruiter View - Visualization Callout */
 
 .visualization-callout {
   width: min(1180px, calc(100% - 48px));
@@ -593,7 +532,35 @@ p {
   text-align: center;
 }
 
-/* Recruiter View — About Approach */
+.visualization-placeholder {
+  padding: 32px;
+  border: 1px solid rgba(var(--green-primary-rgb), 0.18);
+  border-radius: 24px;
+  background: rgba(var(--surface-sage-rgb), 0.35);
+}
+
+.visualization-placeholder-label {
+  margin-bottom: 10px;
+  color: var(--text-green-soft);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.visualization-placeholder h3 {
+  margin-bottom: 12px;
+}
+
+.visualization-placeholder span {
+  display: inline-block;
+  margin-top: 18px;
+  color: var(--green-primary);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+/* Recruiter View - About & Approach */
 
 .about-profile {
   display: grid;
@@ -653,8 +620,8 @@ p {
 .approach-number {
   margin-bottom: 42px;
   color: var(--text-green-soft);
-  font-size: 1.1rem;
   font-family: var(--font-cormorant), Georgia, serif;
+  font-size: 1.1rem;
 }
 
 .approach-card {
@@ -723,439 +690,11 @@ p {
   margin-top: 36px;
 }
 
-/* Recruiter View - Visualization Callout */
-
-.visualization-placeholder {
-  padding: 32px;
-  border: 1px solid rgba(var(--green-primary-rgb), 0.18);
-  border-radius: 24px;
-  background: rgba(var(--surface-sage-rgb), 0.35);
-}
-
-.visualization-placeholder-label {
-  margin-bottom: 10px;
-  color: var(--text-green-soft);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.visualization-placeholder h3 {
-  margin-bottom: 12px;
-}
-
-.visualization-placeholder span {
-  display: inline-block;
-  margin-top: 18px;
-  color: var(--green-primary);
-  font-size: 0.82rem;
-  font-weight: 600;
-}
-
-/* Explorer View - Foyer */
-
-.explorer-foyer {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-  background: var(--ink);
-}
-
-/*
- * The scene is now the coordinate system.
- * The image and all overlay content scale together.
- */
-.foyer-scene {
-  position: relative;
-  width: 100vw;
-  aspect-ratio: 3 / 2;
-  overflow: hidden;
-}
-
-.foyer-background-desktop {
-  display: block;
-}
-
-.foyer-background-mobile {
-  display: none;
-}
-
-.foyer-background {
-  object-fit: contain;
-  object-position: center;
-  z-index: 0;
-}
-
-.foyer-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  background: rgba(var(--green-deep-rgb), 0.04);
-}
-
-/*
- * These percentages are relative to .foyer-scene,
- * not the browser window.
- */
-.foyer-content {
-  position: absolute;
-  z-index: 2;
-
-  top: 31%;
-  left: 52%;
-
-  width: 29%;
-
-  padding: 0;
-  transform: translateX(-50%);
-  text-align: center;
-}
-
-.foyer-eyebrow {
-  margin: 0 0 2.5%;
-  color: var(--green-primary);
-  font-size: clamp(0.55rem, 0.8vw, 0.78rem);
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
-
-.foyer-content h1 {
-  margin: 0;
-  color: var(--green-deep);
-  font-family: var(--font-cormorant), Georgia, serif;
-  font-size: clamp(2rem, 3.4vw, 3.8rem);
-  font-weight: 600;
-  letter-spacing: -0.03em;
-  line-height: 0.95;
-}
-
-.foyer-intro {
-  width: 92%;
-  margin: 5% auto 0;
-  color: var(--green-primary);
-  font-size: clamp(0.72rem, 1vw, 1rem);
-  line-height: 1.5;
-}
-
-.foyer-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  margin-top: 7%;
-  padding: 11px 20px;
-
-  border: 1px solid rgba(140, 108, 60, 0.82);
-  border-radius: 2px;
-
-  background:
-    radial-gradient(
-      circle at 30% 20%,
-      rgba(255, 255, 255, 0.04),
-      transparent 35%
-    ),
-    radial-gradient(
-      circle at 75% 70%,
-      rgba(var(--green-deep-rgb), 0.35),
-      transparent 40%
-    ),
-    linear-gradient(
-      to bottom,
-      rgba(var(--green-primary-rgb), 0.96),
-      rgba(var(--green-deep-rgb), 0.98)
-    );
-
-  color: var(--parchment);
-
-  font-size: clamp(0.55rem, 0.75vw, 0.72rem);
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-decoration: none;
-  text-transform: uppercase;
-  white-space: nowrap;
-
-  box-shadow:
-    inset 0 0 0 1px rgba(140, 108, 60, 0.32),
-    inset 0 2px 4px rgba(255, 255, 255, 0.03),
-    inset 0 -5px 12px rgba(var(--green-deep-rgb), 0.58),
-    0 3px 8px rgba(var(--green-deep-rgb), 0.3);
-
-  text-shadow:
-    0 1px 0 rgba(var(--green-deep-rgb), 0.9),
-    0 0 3px rgba(var(--parchment-rgb), 0.14);
-
-  transition:
-    transform 180ms ease,
-    box-shadow 180ms ease,
-    border-color 180ms ease;
-}
-
-.foyer-button:hover {
-  transform: translateY(-2px);
-
-  border-color: rgba(176, 138, 74, 0.95);
-
-  box-shadow:
-    inset 0 0 0 1px rgba(176, 138, 74, 0.42),
-    inset 0 2px 4px rgba(255, 255, 255, 0.05),
-    inset 0 -4px 10px rgba(var(--green-deep-rgb), 0.5),
-    0 6px 14px rgba(var(--green-deep-rgb), 0.38);
-}
-
-.foyer-clue {
-  position: absolute;
-  z-index: 2;
-  bottom: 3%;
-  left: 50%;
-
-  width: 42%;
-  margin: 0;
-
-  transform: translateX(-50%);
-
-  color: var(--parchment);
-  font-family: var(--font-cormorant), Georgia, serif;
-  font-size: clamp(0.72rem, 1vw, 1rem);
-  font-style: italic;
-  line-height: 1.4;
-  text-align: center;
-
-  text-shadow: 0 2px 8px rgba(var(--green-deep-rgb), 0.9);
-}
-
-.foyer-recruiter-link {
-  position: absolute;
-  z-index: 3;
-  bottom: 3%;
-  left: 3%;
-
-  color: var(--parchment);
-  font-size: 0.78rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-decoration: none;
-
-  text-shadow: 0 2px 8px rgba(var(--green-deep-rgb), 0.9);
-
-  transition:
-    transform 180ms ease,
-    opacity 180ms ease;
-}
-
-.foyer-recruiter-link:hover {
-  transform: translateX(-3px);
-  opacity: 0.8;
-}
-
-/* Explorer View - Map Room */
-
-.map-room {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-  background: var(--ink);
-}
-
-.map-scene {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  container-type: inline-size;
-}
-
-.map-background-desktop {
-  display: block;
-}
-
-.map-background-mobile {
-  display: none;
-}
-
-.map-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.map-hotspots {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-}
-
-.map-hotspot {
-  font-family: var(--font-caveat);
-  position: absolute;
-  display: grid;
-  place-items: center;
-  color: var(--green-deep);
-  text-decoration: none;
-  background: transparent;
-  transition:
-    background 180ms ease,
-    box-shadow 180ms ease,
-    transform 180ms ease;
-  align-content: center;
-  opacity: 0.8;
-}
-
-.map-hotspot:hover {
-  background: rgba(var(--parchment-rgb), 0.12);
-  box-shadow: inset 0 0 0 1px rgba(176, 138, 74, 0.28);
-  transform: scale(1.015);
-}
-
-.map-hotspot-title {
-  font-size: 1.4em;
-  line-height: 0.8em;
-}
-
-.map-hotspot-description {
-  font-size: 0.9em;
-  margin-top: 0.1em;
-}
-
-.map-hotspot span {
-  font-weight: 600;
-  text-align: center;
-}
-
-.map-hotspot-text {
-  display: grid;
-  place-items: center;
-  transform: rotate(-2deg);
-}
-
-.map-hotspot-foyer {
-  font-size: 1.2em;
-  top: 30%;
-  left: 43.5%;
-  width: 14%;
-  height: 14%;
-  border-radius: 50%;
-}
-
-.map-hotspot-map-room {
-  top: 31%;
-  left: 26%;
-  width: 12%;
-  height: 12%;
-}
-
-.map-hotspot-reading-room {
-  top: 9%;
-  left: 43%;
-  width: 14%;
-  height: 12%;
-  font-size: 1.6cqw;
-}
-
-.map-hotspot-glasshouse {
-  top: 30%;
-  left: 64%;
-  width: 14%;
-  height: 12%;
-  transform: rotate(0deg);
-}
-
-.map-hotspot-office {
-  top: 57%;
-  left: 40%;
-  width: 14%;
-  height: 12%;
-}
-
-.map-hotspot-observatory {
-  font-size: 0.8em;
-  top: 47%;
-  left: 62%;
-  width: 10%;
-  height: 9%;
-  transform: rotate(0deg);
-}
-
-.map-hotspot-filing-cabinet {
-  font-size: 0.8em;
-  line-height: 0.99em;
-  gap: 0.5px;
-  top: 61%;
-  left: 62%;
-  width: 10%;
-  height: 9%;
-  transform: rotate(0deg);
-}
-
-.map-key {
-  position: absolute;
-  z-index: 3;
-  top: 60%;
-  left: 26%;
-  font-size: 0.9em;
-  font-family: var(--font-caveat);
-}
-
-.map-key-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.map-key-line {
-  position: relative;
-  width: 48px;
-  height: 1px;
-  background: var(--ink);
-}
-
-.map-key-line::after {
-  content: "";
-  position: absolute;
-  right: -6px;
-  top: 50%;
-
-  width: 0;
-  height: 0;
-
-  border-top: 4px solid transparent;
-  border-bottom: 4px solid transparent;
-  border-left: 6px solid var(--ink);
-
-  transform: translateY(-50%);
-}
-
-.map-key-secondary .map-key-line::after {
-  width: 6px;
-  height: 6px;
-  right: -7px;
-  border-radius: 50%;
-  border: 2px solid var(--ink);
-}
-
-.map-key-secret .map-key-line {
-  border-top: 1px dashed var(--ink);
-  background: transparent;
-}
-
-/* Explorer View — Large Screens */
-
-/*
- * No foyer-specific large-screen override needed.
- * The foyer content is now positioned relative to .foyer-scene
- * and scales with the scene itself.
- */
-
 /* Responsive Styles - Tablet */
 
 @media (max-width: 960px) {
   .site-header {
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr;
   }
 
   .primary-nav {
@@ -1195,113 +734,13 @@ p {
     gap: 40px;
   }
 
+  .about-profile {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
   .approach-grid {
     grid-template-columns: 1fr;
-  }
-
-  .foyer-background-desktop {
-    display: none;
-  }
-
-  .foyer-background-mobile {
-    display: block;
-  }
-
-  .map-background-desktop {
-    display: none;
-  }
-
-  .map-background-mobile {
-    display: block;
-  }
-
-  .map-scene {
-    width: 100vw;
-    height: 100svh;
-    aspect-ratio: auto;
-  }
-
-  .map-background {
-    object-fit: contain;
-    object-position: center;
-    transform: scale(1.08);
-  }
-}
-
-/* Responsive Styles - Landscape */
-
-@media screen and (max-width: 960px) and (orientation: landscape) {
-  .foyer-background-desktop {
-    display: block;
-  }
-
-  .foyer-background-mobile {
-    display: none;
-  }
-
-  .map-background-desktop {
-    display: block;
-  }
-
-  .map-background-mobile {
-    display: none;
-  }
-
-  .map-hotspot-foyer {
-    top: 30%;
-    left: 43.5%;
-    width: 14%;
-    height: 14%;
-  }
-
-  .map-hotspot-map-room {
-    top: 29%;
-    left: 25.5%;
-    width: 14%;
-    height: 14%;
-  }
-
-  .map-hotspot-reading-room {
-    top: 7%;
-    left: 43%;
-    width: 14%;
-    height: 14%;
-  }
-
-  .map-hotspot-glasshouse {
-    top: 28%;
-    left: 64%;
-    width: 14%;
-    height: 14%;
-  }
-
-  .map-hotspot-office {
-    top: 55%;
-    left: 40%;
-    width: 14%;
-    height: 14%;
-  }
-
-  .map-hotspot-observatory {
-    top: 45%;
-    left: 60%;
-    width: 14%;
-    height: 14%;
-  }
-
-  .map-hotspot-filing-cabinet {
-    top: 57%;
-    left: 60%;
-    width: 14%;
-    height: 14%;
-  }
-
-  .map-key {
-    position: absolute;
-    z-index: 3;
-    top: 60%;
-    left: 25%;
-    font-size: 0.75em;
   }
 }
 
@@ -1325,10 +764,6 @@ p {
     font-size: 1.35rem;
   }
 
-  .view-toggle {
-    display: none;
-  }
-
   .recruiter-hero {
     min-height: auto;
     padding: 64px 0;
@@ -1348,7 +783,6 @@ p {
 
   .hero-visual {
     min-height: 340px;
-    border-radius: 160px 160px 24px 24px;
   }
 
   .experience-snapshot {
@@ -1391,136 +825,5 @@ p {
 
   .contact-actions .button {
     width: 100%;
-  }
-
-  .foyer-scene {
-    width: 100vw;
-    height: 100svh;
-    aspect-ratio: auto;
-  }
-
-  .foyer-background {
-    object-fit: cover;
-    object-position: center;
-    transform: none;
-  }
-
-  .foyer-content {
-    top: 35%;
-    left: 50%;
-    width: 44%;
-  }
-
-  .foyer-eyebrow {
-    font-size: 0.46rem;
-    letter-spacing: 0.12em;
-  }
-
-  .foyer-content h1 {
-    font-size: clamp(1.6rem, 7vw, 2.2rem);
-  }
-
-  .foyer-intro {
-    width: 92%;
-    margin-top: 5%;
-    font-size: clamp(0.56rem, 2.3vw, 0.7rem);
-    line-height: 1.4;
-  }
-
-  .foyer-button {
-    margin-top: 7%;
-    padding: 8px 12px;
-    font-size: 0.52rem;
-    letter-spacing: 0.08em;
-  }
-
-  .foyer-clue {
-    bottom: 5%;
-    width: 78%;
-    font-size: 0.72rem;
-  }
-
-  .map-background-desktop {
-    display: none;
-  }
-
-  .map-background-mobile {
-    display: block;
-  }
-
-  .map-scene {
-    width: 100vw;
-    height: 100svh;
-    aspect-ratio: auto;
-  }
-
-  .map-background {
-    object-fit: contain;
-    object-position: center;
-    transform: scale(1.12);
-  }
-
-  .map-hotspot {
-    font-size: 0.8em;
-  }
-
-  .map-hotspot-foyer {
-    top: 33.5%;
-    left: 42%;
-    width: 16%;
-    height: 10%;
-  }
-
-  .map-hotspot-map-room {
-    top: 32%;
-    left: 19%;
-    width: 14%;
-    height: 14%;
-  }
-
-  .map-hotspot-reading-room {
-    top: 24%;
-    left: 35%;
-    width: 30%;
-    height: 6%;
-  }
-
-  .map-hotspot-glasshouse {
-    top: 32%;
-    left: 68%;
-    width: 14%;
-    height: 14%;
-  }
-
-  .map-hotspot-office {
-    top: 45%;
-    left: 38%;
-    width: 14%;
-    height: 14%;
-  }
-
-  .map-hotspot-observatory {
-    top: 45.5%;
-    left: 64%;
-    width: 14%;
-    height: 14%;
-    font-size: 0.65em;
-  }
-
-  .map-hotspot-filing-cabinet {
-    top: 51.5%;
-    left: 63%;
-    width: 14%;
-    height: 14%;
-    font-size: 0.5em;
-    line-height: 0.75em;
-  }
-
-  .map-key {
-    position: absolute;
-    z-index: 3;
-    top: 61%;
-    left: 25%;
-    font-size: 0.75em;
   }
 }

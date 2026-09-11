@@ -31,31 +31,22 @@ export default function RecruiterHero() {
             <Link className="button button-primary" href="#work">
               View My Work
             </Link>
-
-            <Link className="button button-secondary" href="/explorer">
-              Enter Explorer View
-            </Link>
           </div>
         </div>
 
         <div className="hero-visual">
-          <Link
-            className="portal-scene"
-            href="/explorer"
-            aria-label="Enter Explorer View"
-          >
+          <div className="portal-scene">
             <div className="portal-frame">
               <Image
                 src="/images/garden-entry-to-house.png"
-                alt="An enchanted garden entrance leading into Explorer View"
+                alt="An ivy-covered garden path leading to an old house"
                 fill
                 className="portal-image"
                 sizes="(max-width: 960px) 90vw, 40vw"
                 priority
               />
             </div>
-            <p className="portal-caption">A different way in →</p>
-          </Link>
+          </div>
         </div>
       </section>
 

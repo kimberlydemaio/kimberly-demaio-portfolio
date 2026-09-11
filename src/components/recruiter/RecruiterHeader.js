@@ -14,13 +14,6 @@ export default function RecruiterHeader() {
         <Link href="#about">About</Link>
         <Link href="#contact">Contact</Link>
       </nav>
-
-      <div className="view-toggle" aria-label="Choose portfolio view">
-        <span className="view-option view-option-active">Recruiter View</span>
-        <Link className="view-option" href="/explorer">
-          Explorer View
-        </Link>
-      </div>
     </header>
   );
 }
