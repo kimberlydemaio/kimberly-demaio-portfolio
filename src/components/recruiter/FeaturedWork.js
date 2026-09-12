@@ -4,11 +4,11 @@ const projects = [
   {
     number: "01",
     category: "Product + Creative Development",
-    title: "Custom Tee-Shirt Generator",
+    title: "Neon Roadie",
     description:
       "A personalized shirt-building experience that turns user choices into a custom design, with plans for customer-submitted gallery features after purchase.",
     result: "In development",
-    href: "/projects/custom-tee-shirt-generator",
+    href: "/projects/neon-roadie",
   },
   {
     number: "02",
@@ -31,7 +31,7 @@ const projects = [
   {
     number: "04",
     category: "Automation + People Data",
-    title: "Review Gen",
+    title: "Leadership Review Automation",
     description:
       "I built a system that turns thousands of survey responses into individualized leadership reviews—cutting a process that once took months down to minutes.",
     result: "From months to minutes",

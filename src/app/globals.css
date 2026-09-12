@@ -1081,6 +1081,26 @@ p {
   line-height: 1.65;
 }
 
+.case-study-visual {
+  margin-top: 36px;
+  overflow: hidden;
+  border: 1px solid rgba(var(--espresso-rgb), 0.13);
+  border-radius: 24px;
+  background: var(--warm-white);
+  box-shadow: 0 20px 50px rgba(var(--espresso-rgb), 0.08);
+}
+
+.case-study-visual-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.case-study-visual-questionnaire,
+.case-study-visual-results {
+  width: min(100%, 680px);
+}
+
 /* Outcome strip */
 
 .case-study-highlights {
@@ -1112,6 +1132,28 @@ p {
   font-family: var(--font-cormorant), Georgia, serif;
   font-size: 2rem;
   font-weight: 500;
+}
+
+.case-study-secondary-button,
+.case-study-secondary-button:visited {
+  border-color: var(--espresso);
+  background: transparent;
+  color: var(--espresso);
+}
+
+.case-study-secondary-button:hover {
+  border-color: var(--cognac);
+  background: rgba(var(--cognac-rgb), 0.06);
+  color: var(--cognac);
+}
+
+.case-study-inline-link,
+.case-study-inline-link:visited {
+  color: var(--walnut);
+}
+
+.case-study-inline-link:hover {
+  color: var(--cognac);
 }
 
 /* Navigation */

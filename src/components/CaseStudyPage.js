@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function CaseStudyPage({
@@ -12,6 +13,8 @@ export default function CaseStudyPage({
   board,
   sections,
   highlights,
+  liveProject,
+  sampleReport,
   nextProject,
 }) {
   return (
@@ -30,6 +33,32 @@ export default function CaseStudyPage({
             <h1>{title}</h1>
 
             <p className="case-study-summary">{summary}</p>
+
+            {(liveProject || sampleReport) && (
+              <div className="case-study-actions">
+                {liveProject && (
+                  <a
+                    className="button button-primary"
+                    href={liveProject.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {liveProject.label} ↗
+                  </a>
+                )}
+
+                {sampleReport && (
+                  <a
+                    className="button case-study-secondary-button"
+                    href={sampleReport.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {sampleReport.label} ↗
+                  </a>
+                )}
+              </div>
+            )}
           </div>
 
           <div className="case-study-board">
@@ -95,6 +124,31 @@ export default function CaseStudyPage({
                       <li key={bullet}>{bullet}</li>
                     ))}
                   </ul>
+                )}
+
+                {section.image && (
+                  <div
+                    className={`case-study-visual case-study-visual-${section.visual}`}
+                  >
+                    <Image
+                      src={section.image}
+                      alt={section.imageAlt}
+                      width={1400}
+                      height={900}
+                      className="case-study-visual-image"
+                    />
+                  </div>
+                )}
+
+                {section.visual === "report" && sampleReport && (
+                  <a
+                    className="case-study-inline-link"
+                    href={sampleReport.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View sample report ↗
+                  </a>
                 )}
               </div>
             </section>
