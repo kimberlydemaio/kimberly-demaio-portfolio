@@ -8,11 +8,11 @@ export default function RecruiterHeader() {
       </Link>
 
       <nav className="primary-nav" aria-label="Primary navigation">
-        <Link href="#work">Work</Link>
-        <Link href="#visualizations">Visualizations</Link>
-        <Link href="#experience">Experience</Link>
-        <Link href="#about">About</Link>
-        <Link href="#contact">Contact</Link>
+        <Link href="/#work">Work</Link>
+        <Link href="/visualizations">Visualizations</Link>
+        <Link href="/#experience">Experience</Link>
+        <Link href="/#about">About</Link>
+        <Link href="/#contact">Contact</Link>
       </nav>
     </header>
   );

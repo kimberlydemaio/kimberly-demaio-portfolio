@@ -1,8 +1,10 @@
 import Link from "next/link";
+import RecruiterHeader from "@/components/recruiter/RecruiterHeader";
 
 export default function WhereTheHoursGoPage() {
   return (
     <main className="visualization-detail-page">
+      <RecruiterHeader />
       <div className="visualization-detail-shell">
         <Link className="visualization-detail-back" href="/visualizations">
           ← All visualizations

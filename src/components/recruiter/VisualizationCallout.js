@@ -1,3 +1,6 @@
+import Image from "next/image";
+import Link from "next/link";
+
 export default function VisualizationCallout() {
   return (
     <section className="visualization-callout" id="visualizations">
@@ -16,17 +19,35 @@ export default function VisualizationCallout() {
       </div>
 
       <div className="visualization-preview">
-        <div className="visualization-placeholder">
-          <p className="visualization-placeholder-label">
-            Interactive visualization
-          </p>
-          <h3>Where the Hours Go</h3>
-          <p>
-            An exploratory look at how people spend their time across work,
-            sleep, care, leisure, and everything in between.
-          </p>
-          <span>Coming to the portfolio soon →</span>
-        </div>
+        <Link
+          className="visualization-home-card"
+          href="/visualizations"
+          aria-label="Explore visualizations"
+        >
+          <div className="visualization-home-image">
+            <Image
+              src="/images/where-the-hours-go-preview.png"
+              alt="Preview of the Where the Hours Go visualization"
+              width={900}
+              height={900}
+            />
+          </div>
+
+          <div className="visualization-home-copy">
+            <p className="visualization-placeholder-label">
+              Interactive visualization
+            </p>
+
+            <h3>Where the Hours Go</h3>
+
+            <p>
+              An exploratory look at how people spend their time across work,
+              sleep, care, leisure, and everything in between.
+            </p>
+
+            <span>Explore visualizations →</span>
+          </div>
+        </Link>
       </div>
     </section>
   );

@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import RecruiterHeader from "@/components/recruiter/RecruiterHeader";
 
 export default function VisualizationsPage() {
   return (
     <main className="visualizations-page">
+      <RecruiterHeader />
       <div className="visualizations-shell">
         <section className="visualizations-hero">
           <p className="section-eyebrow">Visualizations</p>
