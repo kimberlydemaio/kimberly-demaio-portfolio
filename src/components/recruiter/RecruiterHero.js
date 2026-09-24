@@ -2,11 +2,11 @@ import Link from "next/link";
 import Image from "next/image";
 
 const capabilities = [
-  "Analytics",
-  "Business Operations",
-  "Workflows & Processes",
-  "Software Development",
-  "Creative Problem-Solving",
+  "Analytics Engineering",
+  "Business Systems",
+  "Internal Tools",
+  "Workflow Automation",
+  "Data Visualization",
 ];
 
 export default function RecruiterHero() {
@@ -15,16 +15,18 @@ export default function RecruiterHero() {
       <section className="recruiter-hero" aria-labelledby="hero-heading">
         <div className="hero-copy">
           <p className="eyebrow">
-            Operations. Data. Analytics. Systems. Full-stack Dev.
+            Business Systems Analyst · Internal Tools · Analytics Engineering
           </p>
 
           <h1 id="hero-heading">I like making things make sense.</h1>
 
           <p className="hero-description">
-            Hi, I&apos;m Kimberly! I love solving tricky problems and finding
-            patterns in chaos. I enjoy turning scattered ideas into something
-            clear and helpful—whether that&apos;s a system, a process, or a web
-            app.
+            Hi, I&apos;m Kimberly! I turn ambiguous and messy operational
+            problems into data models, analytics systems, automated workflows,
+            and internal tools. My work spans requirements and process design
+            through BigQuery/SQL modeling, automation, reporting, and
+            application development. Currently building and owning analytics and
+            operational systems supporting ~500 employees across 16 locations.
           </p>
 
           <div className="hero-actions">
