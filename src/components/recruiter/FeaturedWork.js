@@ -13,11 +13,10 @@ const projects = [
   {
     number: "02",
     category: "AI + Full-Stack Product",
-    title: "Jobnostic",
+    title: "Experigraph",
     description:
-      "I’m building a job discovery platform that turns a resume into a structured candidate profile, finds better-fit opportunities, explains match strength and skill gaps, and keeps the job search organized without forcing users through another traditional job board.",
+      "I’m building a career intelligence platform that turns a person’s experience into a structured Work Graph, uncovers transferable strengths and unexpected career paths, and helps people understand which opportunities they’re positioned for now — and what could open up next.",
     result: "In development",
-    href: "/projects/jobnostic",
   },
   {
     number: "03",

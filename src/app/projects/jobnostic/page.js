@@ -5,17 +5,16 @@ export default function JobnosticPage() {
     <CaseStudyPage
       number="02"
       category="AI + Full-Stack Product"
-      title="Jobnostic"
-      summary="A job discovery platform that analyzes a resume, builds a structured profile around the user's experience and strengths, and helps surface opportunities they may never have thought to search for."
-      status="In development"
-      role="Product design, AI workflow + full-stack development"
+      title="Experigraph"
+      summary="A career intelligence platform that turns a person’s experience into a structured Work Graph, uncovering transferable strengths, unexpected career paths, and opportunities they may never have thought to search for."
+      role="Product strategy, AI systems design, data modeling + full-stack development"
       stack={["Next.js", "OpenAI", "Neon / Postgres", "Stripe", "Vercel"]}
       theme="sage"
       board={{
-        label: "Opportunity pipeline",
-        primary: "RESUME → PROFILE → FIT → OPPORTUNITY",
-        flow: ["Upload", "Analyze", "Profile", "Match"],
-        note: "Less searching. More signal.",
+        label: "Career intelligence flow",
+        primary: "EXPERIENCE → WORK GRAPH → FIT → OPPORTUNITY",
+        flow: ["Experience", "Map", "Evaluate", "Discover"],
+        note: "See where your experience can take you.",
       }}
       sections={[
         {
@@ -47,24 +46,25 @@ export default function JobnosticPage() {
           ],
         },
         {
-          title: "Thinking beyond the prototype",
+          title: "Building beyond the prototype",
           body: [
-            "Jobnostic has also pushed me to think about software as a business rather than only as a technical build. AI usage has a real variable cost, which means product limits, subscription pricing, and infrastructure decisions need to be designed together.",
+            "Traditional job searching assumes people already know which titles to search for. That works when the next step is obvious, but breaks down when someone's experience spans functions, industries, or skills that could translate in unexpected ways.",
+            "Experigraph starts from a different question: what if career discovery began with everything a person has actually done — and used that experience to reveal where they could go next?",
           ],
         },
       ]}
       highlights={[
         {
           label: "Core workflow",
-          value: "Resume → profile",
+          value: "Experience → Work Graph",
         },
         {
-          label: "Product layer",
-          value: "AI-assisted discovery",
+          label: "Intelligence layer",
+          value: "AI-powered career mapping",
         },
         {
           label: "Business model",
-          value: "Subscription SaaS",
+          value: "Tiered subscription SaaS",
         },
       ]}
       nextProject={{
