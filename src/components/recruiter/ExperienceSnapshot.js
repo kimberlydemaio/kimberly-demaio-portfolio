@@ -5,25 +5,25 @@ const experienceItems = [
     label: "Operations",
     value: "500+ employees",
     detail:
-      "Reporting, workforce analytics, and operational systems across 16 locations",
+      "Building and managing analytics systems and internal tools across 16 locations",
   },
   {
     label: "Automation",
-    value: "Under 1 hour",
+    value: "80+ hours saved",
     detail:
-      "Reduced complex, manual leadership review delivery from two months to an hour or less",
+      "Eliminated manual work from each leadership-review cycle through automated processing, reporting, and document generation",
   },
   {
     label: "Systems",
-    value: "Built from scratch",
+    value: "10+ systems",
     detail:
-      "Created reporting workflows, training trackers, assessment systems, and decision-support tools",
+      "Designing, developing, and maintaining operational analytics systems, automated workflows, and decision-support tools",
   },
   {
     label: "Development",
-    value: "Full-stack growth",
+    value: "End-to-end",
     detail:
-      "Building production web applications with JavaScript, React, Next.js, APIs, and modern deployment workflows.",
+      "Taking projects from requirements and system design through development, testing, deployment, and ongoing improvements",
   },
 ];
 
