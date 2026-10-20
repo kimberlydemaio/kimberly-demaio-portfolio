@@ -3,45 +3,45 @@ import Link from "next/link";
 const projects = [
   {
     number: "01",
-    category: "Analytics Engineering + Forecasting",
+    category: "DATA ENGINEERING + WORKFORCE ANALYTICS",
     title: "Recruiting Analytics & Workforce Forecasting",
     description:
-      "I’m rebuilding recruiting and workforce analytics into a modeled data system that connects interviews, hiring, headcount, turnover, and new-hire retention—and extends historical reporting into forward-looking staffing forecasts.",
+      "I’m rebuilding recruiting analytics from the data up, connecting historical and current hiring systems, interview activity, headcount, turnover, and retention into a more reliable foundation for reporting and workforce forecasting.",
     result: "In development",
     href: null,
   },
   {
     number: "02",
-    category: "AI + Full-Stack Product",
+    category: "AI + FULL-STACK DEVELOPMENT",
     title: "Experigraph",
     description:
-      "I’m building a career intelligence platform that turns a person’s experience into a structured Work Graph, uncovers transferable strengths and unexpected career paths, and helps people understand which opportunities they’re positioned for now — and what could open up next.",
+      "I’m bbuilding a career intelligence platform that looks beyond job titles to understand what people actually know how to do. It connects professional experience to transferable skills, unexpected career opportunities, and practical paths forward.",
     result: "In development",
   },
   {
     number: "03",
-    category: "Internal Tools + Workforce Analytics",
+    category: "BUSINESS SYSTEMS + WORKFORCE INTELLIGENCE",
     title: "Succession Planning & Leadership Readiness",
     description:
-      "I’m building an internal decision-support system that brings performance, qualifications, training, tenure, leadership feedback, and eligibility rules together to create a clearer and more consistent view of promotion readiness.",
+      "After leadership explored a costly third-party platform, I proposed building our own. I'm designing a system that brings together employee qualifications, performance, training, and leadership input to make promotion readiness more consistent, transparent, and useful.",
     result: "In development",
     href: null,
   },
   {
     number: "04",
-    category: "Workflow Automation + People Analytics",
+    category: "WORKFLOW AUTOMATION + PEOPLE ANALYTICS",
     title: "Leadership Review Automation",
     description:
-      "I built a system that turns thousands of survey responses into individualized leadership reviews—automating analysis, document generation, and delivery for a process that previously took weeks or months.",
+      "I rebuilt a complicated leadership-review process into an automated system that processes thousands of survey responses, generates individualized reports, and removes more than 80 hours of manual work per cycle.",
     result: "80+ hours to minutes",
     href: null,
   },
   {
     number: "05",
-    category: "Internal Tool + Product Development",
+    category: "FULL-STACK PRODUCT + DECISION SUPPORT",
     title: "Business Health Score",
     description:
-      "I designed and launched an interactive assessment that turns structured business inputs into a 0–100 operational health score, prioritized recommendations, and a shareable report.",
+      "I designed and launched an interactive assessment that turns business inputs into an operational health score, highlights areas for improvement, and gives users practical recommendations they can act on.",
     result: "Built and launched",
     href: "/projects/business-health-score",
   },
