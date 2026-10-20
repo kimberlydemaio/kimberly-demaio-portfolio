@@ -15,7 +15,7 @@ const projects = [
     category: "AI + FULL-STACK DEVELOPMENT",
     title: "Experigraph",
     description:
-      "I’m bbuilding a career intelligence platform that looks beyond job titles to understand what people actually know how to do. It connects professional experience to transferable skills, unexpected career opportunities, and practical paths forward.",
+      "I’m building a career intelligence platform that looks beyond job titles to understand what people actually know how to do. It connects professional experience to transferable skills, unexpected career opportunities, and practical paths forward.",
     result: "In development",
   },
   {
