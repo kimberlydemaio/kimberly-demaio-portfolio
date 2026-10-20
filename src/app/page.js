@@ -1,6 +1,9 @@
 import RecruiterHeader from "@/components/recruiter/RecruiterHeader";
 import RecruiterHero from "@/components/recruiter/RecruiterHero";
 import FeaturedWork from "@/components/recruiter/FeaturedWork";
+
+import TechnicalSkills from "@/components/recruiter/TechnicalSkills";
+
 import ExperienceSnapshot from "@/components/recruiter/ExperienceSnapshot";
 import VisualizationCallout from "@/components/recruiter/VisualizationCallout";
 import AboutApproach from "@/components/recruiter/AboutApproach";
@@ -12,6 +15,7 @@ export default function Home() {
       <RecruiterHeader />
       <RecruiterHero />
       <FeaturedWork />
+      <TechnicalSkills />
       <ExperienceSnapshot />
       <VisualizationCallout />
       <AboutApproach />

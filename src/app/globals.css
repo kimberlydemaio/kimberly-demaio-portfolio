@@ -503,6 +503,87 @@ p {
   text-transform: uppercase;
 }
 
+/* Technical Skills Section */
+
+.technical-skills-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 36px 24px;
+}
+
+.technical-skills-intro {
+  max-width: 650px;
+  margin-bottom: 32px;
+}
+
+.technical-skills-intro h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1.15;
+  margin: 16px 0 24px;
+}
+
+.technical-skills-description {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  opacity: 0.75;
+}
+
+.technical-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.technical-skill-card {
+  border: 1px solid rgba(130, 115, 95, 0.22);
+  border-radius: 14px;
+  padding: 32px;
+  background: rgba(130, 115, 95, 0.035);
+}
+
+.technical-skill-number {
+  display: block;
+  font-size: 0.8rem;
+  opacity: 0.5;
+  margin-bottom: 22px;
+}
+
+.technical-skill-card h3 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 0 0 24px;
+}
+
+.technical-skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.technical-skill-tag {
+  border: 1px solid rgba(130, 115, 95, 0.22);
+  border-radius: 100px;
+  padding: 8px 13px;
+  font-size: 0.85rem;
+  line-height: 1.3;
+}
+
+@media (max-width: 700px) {
+  .technical-skills-section {
+    padding: 32px 20px;
+  }
+
+  .technical-skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .technical-skill-card {
+    padding: 24px;
+  }
+}
+
 /* Recruiter View - Experience Snapshot */
 
 .experience-snapshot {
