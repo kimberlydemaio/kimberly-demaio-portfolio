@@ -3,28 +3,30 @@ import Link from "next/link";
 const projects = [
   {
     number: "01",
-    category: "DATA ENGINEERING + WORKFORCE ANALYTICS",
-    title: "Recruiting Analytics & Workforce Forecasting",
-    description:
-      "I’m rebuilding recruiting analytics from the data up, connecting historical and current hiring systems, interview activity, headcount, turnover, and retention into a more reliable foundation for reporting and workforce forecasting.",
-    result: "In development",
-    href: null,
-  },
-  {
-    number: "02",
     category: "AI + FULL-STACK DEVELOPMENT",
     title: "Experigraph",
     description:
-      "I’m building a career intelligence platform that looks beyond job titles to understand what people actually know how to do. It connects professional experience to transferable skills, unexpected career opportunities, and practical paths forward.",
-    result: "In development",
+      "I built and launched an AI-powered career intelligence platform that looks beyond job titles to uncover transferable skills, unexpected opportunities, and practical career paths. It combines structured AI analysis, relational data modeling, and full-stack development.",
+    result: "Live platform",
+    href: "https://experigraph.com",
+    isExternal: true,
   },
   {
-    number: "03",
+    number: "02",
     category: "BUSINESS SYSTEMS + WORKFORCE INTELLIGENCE",
     title: "Succession Planning & Leadership Readiness",
     description:
-      "After leadership explored a costly third-party platform, I proposed building our own. I'm designing a system that brings together employee qualifications, performance, training, and leadership input to make promotion readiness more consistent, transparent, and useful.",
-    result: "In development",
+      "After leadership evaluated a costly third-party platform, I proposed building an internal solution. I developed a Streamlit prototype for evaluating leadership readiness and modeling staffing gaps, promotions, transfers, and cascading vacancies. The system also uses Firebase for employee career-interest and profile workflows.",
+    result: "Functional prototype · Pilot in development",
+    href: null,
+  },
+  {
+    number: "03",
+    category: "DATA ENGINEERING + WORKFORCE ANALYTICS",
+    title: "Data Warehouse & Recruiting Analytics",
+    description:
+      "I architected a layered GCP/BigQuery warehouse to bring disconnected workforce, HR, recruiting, and operational data into a reliable reporting foundation. The work includes employee identity modeling, automated recruiting pipelines, and datasets for understanding hiring activity, workforce trends, and operational performance.",
+    result: "Warehouse development in progress",
     href: null,
   },
   {
@@ -32,8 +34,8 @@ const projects = [
     category: "WORKFLOW AUTOMATION + PEOPLE ANALYTICS",
     title: "Leadership Review Automation",
     description:
-      "I rebuilt a complicated leadership-review process into an automated system that processes thousands of survey responses, generates individualized reports, and removes more than 80 hours of manual work per cycle.",
-    result: "80+ hours to minutes",
+      "I rebuilt a complicated leadership-review process into an automated system that processes approximately 4,000 survey responses each quarter, generates individualized reports, and eliminates more than 80 hours of manual work per cycle.",
+    result: "80+ hours saved per quarter",
     href: null,
   },
   {
@@ -42,7 +44,7 @@ const projects = [
     title: "Business Health Score",
     description:
       "I designed and launched an interactive assessment that turns business inputs into an operational health score, highlights areas for improvement, and gives users practical recommendations they can act on.",
-    result: "Built and launched",
+    result: "Live application",
     href: "/projects/business-health-score",
   },
 ];
@@ -72,7 +74,9 @@ export default function FeaturedWork() {
 
             <div className="project-content">
               <p className="project-category">{project.category}</p>
+
               <h3>{project.title}</h3>
+
               <p className="project-description">{project.description}</p>
             </div>
 
@@ -80,8 +84,13 @@ export default function FeaturedWork() {
               <span>{project.result}</span>
 
               {project.href ? (
-                <Link href={project.href} aria-label={`View ${project.title}`}>
-                  View project →
+                <Link
+                  href={project.href}
+                  aria-label={`View ${project.title}`}
+                  target={project.isExternal ? "_blank" : undefined}
+                  rel={project.isExternal ? "noopener noreferrer" : undefined}
+                >
+                  {project.isExternal ? "Visit live site ↗" : "View project →"}
                 </Link>
               ) : (
                 <span className="project-status">Case study coming soon</span>

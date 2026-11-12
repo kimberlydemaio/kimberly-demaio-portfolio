@@ -21,9 +21,9 @@ const caveat = Caveat({
 });
 
 export const metadata = {
-  title: "Kimberly DeMaio | Portfolio",
+  title: "Kimberly DeMaio | Analytics Engineer & Internal Tools Developer",
   description:
-    "Business operations, analytics, systems thinking, software development, and creative problem-solving.",
+    "Analytics Engineer and Internal Tools Developer specializing in BigQuery, GCP, data warehousing, automation, and full-stack applications.",
 };
 
 export default function RootLayout({ children }) {

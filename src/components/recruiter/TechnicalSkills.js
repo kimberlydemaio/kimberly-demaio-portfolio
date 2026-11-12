@@ -10,6 +10,7 @@ const skillGroups = [
       "PostgreSQL",
       "Data Modeling",
       "Data Warehousing",
+      "ETL / ELT",
     ],
   },
   {
@@ -20,6 +21,8 @@ const skillGroups = [
       "React",
       "Next.js",
       "Node.js",
+      "Streamlit",
+      "FastAPI",
       "REST APIs",
       "Git / GitHub",
     ],
@@ -38,7 +41,17 @@ const skillGroups = [
   {
     number: "04",
     title: "Product & Infrastructure",
-    skills: ["Vercel", "AWS S3", "Neon", "Clerk", "OpenAI APIs"],
+    skills: [
+      "Cloud Run",
+      "Firebase",
+      "Vercel",
+      "AWS S3",
+      "Neon",
+      "Clerk",
+      "Stripe",
+      "OpenAI APIs",
+      "Structured Outputs",
+    ],
   },
 ];
 

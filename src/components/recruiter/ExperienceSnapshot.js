@@ -5,25 +5,25 @@ const experienceItems = [
     label: "Operations",
     value: "500+ employees",
     detail:
-      "Building and managing analytics systems and internal tools across 16 locations",
+      "Building data infrastructure, analytics, and internal applications supporting operations across 16 locations.",
   },
   {
     label: "Automation",
     value: "80+ hours saved",
     detail:
-      "Eliminated manual work from each leadership-review cycle through automated processing, reporting, and document generation",
+      "Eliminated manual work each quarterly leadership-review cycle through automated processing, reporting, and document generation.",
   },
   {
     label: "Systems",
     value: "10+ systems",
     detail:
-      "Designing, developing, and maintaining operational analytics systems, automated workflows, and decision-support tools",
+      "Developed tools spanning employee records, qualifications, recruiting integrations, leadership reviews, and operational reporting.",
   },
   {
     label: "Development",
     value: "End-to-end",
     detail:
-      "Taking projects from requirements and system design through development, testing, deployment, and ongoing improvements",
+      "Taking solutions from business requirements and architecture through development, testing, deployment, and ongoing improvements.",
   },
 ];
 
@@ -35,13 +35,18 @@ export default function ExperienceSnapshot() {
           <p className="section-eyebrow">Experience at a glance</p>
 
           <h2>
-            My work lives at the intersection of people, data, operations, and
-            systems.
+            From understanding operations to building the systems behind them.
           </h2>
 
           <p>
-            I combine big-picture thinking with hands-on building, from
-            understanding the real problem to creating the workflows, reports,
+            My career began in operations leadership, evolved into business
+            intelligence, and led me into data engineering, internal
+            applications, and independent product development.
+          </p>
+
+          <p>
+            That background shapes how I build. I understand the people and
+            processes behind a problem before designing the systems, workflows,
             and tools that help solve it.
           </p>
         </div>
@@ -62,7 +67,9 @@ export default function ExperienceSnapshot() {
         {experienceItems.map((item) => (
           <article key={item.label} className="experience-card">
             <p className="experience-label">{item.label}</p>
+
             <h3>{item.value}</h3>
+
             <p>{item.detail}</p>
           </article>
         ))}
