@@ -1753,6 +1753,10 @@ p {
   }
 }
 
+.case-study-visual-experigraph {
+  width: min(100%, 900px);
+}
+
 /* Responsive Styles - Tablet */
 
 @media (max-width: 960px) {

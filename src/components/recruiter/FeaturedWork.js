@@ -8,7 +8,7 @@ const projects = [
     description:
       "I built and launched an AI-powered career intelligence platform that looks beyond job titles to uncover transferable skills, unexpected opportunities, and practical career paths. It combines structured AI analysis, relational data modeling, and full-stack development.",
     result: "Live platform",
-    href: "https://experigraph.com",
+    href: "/projects/experigraph",
     isExternal: true,
   },
   {
@@ -26,7 +26,7 @@ const projects = [
     title: "Data Warehouse & Recruiting Analytics",
     description:
       "I architected a layered GCP/BigQuery warehouse to bring disconnected workforce, HR, recruiting, and operational data into a reliable reporting foundation. The work includes employee identity modeling, automated recruiting pipelines, and datasets for understanding hiring activity, workforce trends, and operational performance.",
-    result: "Warehouse development in progress",
+    result: "Fully up and running",
     href: null,
   },
   {

@@ -22,16 +22,16 @@ export default function RecruiterHero() {
           <h1 id="hero-heading">I like making things make sense.</h1>
 
           <p className="hero-description">
-            Hi, I&apos;m Kimberly! I work somewhere between business operations,
-            data, and software development — turning complicated problems into
-            systems, tools, and solutions that actually make sense.
+            Hi, I&apos;m Kimberly! I build the systems, data infrastructure, and
+            applications that make complicated operations easier to understand
+            and manage.
           </p>
 
           <p className="hero-description">
-            I like getting to the bottom of how things work, finding what&apos;s
-            missing, and figuring out what to build next. Sometimes that&apos;s
-            a data warehouse or an automated workflow. Other times, it&apos;s an
-            entirely new application.
+            My background is in business operations, but my work has evolved
+            into data engineering, automation, and software development. I like
+            understanding how things work, figuring out what&apos;s missing, and
+            building solutions that make a measurable difference.
           </p>
 
           <p className="hero-description">
